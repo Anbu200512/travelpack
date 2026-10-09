@@ -1,0 +1,252 @@
+/* TravelPack – Pack Smart. Travel Far. */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: #f97316;
+  color: #fff;
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- Dropdown / menu ---------- */
+.tp-dropdown-menu {
+  animation: tpFade 0.18s ease;
+}
+
+@keyframes tpFade {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tp-mobile-panel {
+  animation: tpSlide 0.22s ease;
+}
+
+@keyframes tpSlide {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- FAQ accordion ---------- */
+.faq-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.faq-panel > div {
+  overflow: hidden;
+}
+
+.faq-item.is-open .faq-panel {
+  grid-template-rows: 1fr;
+}
+
+.faq-item.is-open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-chevron {
+  transition: transform 0.3s ease;
+}
+
+/* ---------- Modal ---------- */
+.tp-modal {
+  animation: tpModalIn 0.2s ease;
+}
+
+@keyframes tpModalIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+
+.tp-modal-backdrop {
+  animation: tpFade 0.2s ease;
+}
+
+body.tp-locked {
+  overflow: hidden;
+}
+
+/* ---------- Forms ---------- */
+.tp-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #eadfce;
+  background: #fff;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.9rem;
+  color: #0f2440;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tp-input:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.18);
+}
+
+.dark .tp-input {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(10, 26, 48, 0.6);
+  color: #f5efe6;
+}
+
+.dark .tp-input:focus {
+  border-color: #fb923c;
+  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.2);
+}
+
+.tp-input.is-invalid {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.14);
+}
+
+select.tp-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%236f553a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-inline-end: 2.2rem;
+}
+
+[dir="rtl"] select.tp-input {
+  background-position: left 0.75rem center;
+}
+
+.dark select.tp-input {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23ddc9a8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+}
+
+.error-text {
+  display: none;
+}
+
+.error-text.is-visible {
+  display: block;
+}
+
+/* ---------- Misc utilities ---------- */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tp-line {
+  background-image: linear-gradient(90deg, #f97316 0%, #2f80ed 100%);
+}
+
+[dir="rtl"] .tp-line {
+  background-image: linear-gradient(270deg, #f97316 0%, #2f80ed 100%);
+}
+
+/* back to top */
+#back-to-top {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+#back-to-top.is-hidden {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+}
+
+/* subtle card lift */
+.tp-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tp-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* horizontal snap scroller */
+.tp-scroller {
+  scroll-snap-type: x mandatory;
+}
+
+.tp-scroller > * {
+  scroll-snap-align: start;
+}
+
+/* Hero overlay gradient (mirrors in RTL) */
+.tp-hero-overlay {
+  background-image: linear-gradient(90deg, rgba(10,26,48,.96) 0%, rgba(10,26,48,.86) 42%, rgba(10,26,48,.35) 100%);
+}
+
+[dir="rtl"] .tp-hero-overlay {
+  background-image: linear-gradient(270deg, rgba(10,26,48,.96) 0%, rgba(10,26,48,.86) 42%, rgba(10,26,48,.35) 100%);
+}
+
+.tp-hero-soft {
+  background-image: linear-gradient(90deg, rgba(10,26,48,.92) 0%, rgba(10,26,48,.72) 55%, rgba(10,26,48,.55) 100%);
+}
+
+[dir="rtl"] .tp-hero-soft {
+  background-image: linear-gradient(270deg, rgba(10,26,48,.92) 0%, rgba(10,26,48,.72) 55%, rgba(10,26,48,.55) 100%);
+}
+
+/* ---------- Ultra-narrow header (fits 320px) ---------- */
+@media (max-width: 359.98px) {
+  #site-header .tp-tagline {
+    display: none;
+  }
+
+  #site-header .tp-brand-icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    border-radius: 0.65rem;
+  }
+
+  #site-header .tp-brand-name {
+    font-size: 1rem;
+  }
+
+  #site-header #dir-toggle {
+    height: 2.25rem;
+    padding-inline: 0.55rem;
+  }
+
+  #site-header #theme-toggle,
+  #site-header #mobile-toggle {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+}
+

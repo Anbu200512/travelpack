@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About TravelPack — A Local Luggage Store With Its Own Repair Bench</title>
+<meta name="description" content="TravelPack has been fitting travellers with cabin cases, sets and backpacks since 2009 — honest advice on the shop floor, an in-house repair bench behind it, and no upselling you do not need.">
+<script>(function(){try{var t=localStorage.getItem('travelpack_theme');if(t!=='dark'&&t!=='light'){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}var d=localStorage.getItem('travelpack_direction');document.documentElement.setAttribute('dir',d==='rtl'?'rtl':'ltr');}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        navy: {50:'#f1f6fb',100:'#e2ecf7',200:'#c2d7ee',300:'#93b5db',400:'#5e8fc3',500:'#3c71ae',600:'#2a5790',700:'#224674',800:'#1b365a',900:'#122745',950:'#0a1a30'},
+        charcoal: {50:'#f6f7f8',100:'#eceef0',200:'#d5d9de',300:'#b0b8c1',400:'#8590a0',500:'#67748a',600:'#535d73',700:'#434b5e',800:'#3a4150',900:'#2a2f3b',950:'#1a1d25'},
+        sand: {50:'#faf8f4',100:'#f4efe6',200:'#eadfce',300:'#dcc8a5',400:'#cdb083',500:'#bf9a66',600:'#a98153',700:'#8c6745',800:'#73543c',900:'#5f4633'},
+        accent: {400:'#fb923c',500:'#f97316',600:'#ea580c',700:'#c2410c'},
+        azure: {400:'#5b9cf5',500:'#2f80ed',600:'#1f6ad4',700:'#1a55ab'}
+      },
+      fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['Outfit','Inter','sans-serif'] }
+    }
+  }
+};
+</script>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/main.js" defer></script>
+<script src="js/nav.js" defer></script>
+</head>
+<body data-page="about" class="bg-sand-50 text-charcoal-700 dark:bg-navy-950 dark:text-sand-200 antialiased">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="sticky top-0 z-50 border-b border-sand-200 bg-white/90 backdrop-blur transition-shadow dark:border-white/10 dark:bg-navy-950/90">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between gap-3 lg:h-20">
+      <a href="index.html" class="flex shrink-0 items-center gap-2.5">
+        <span class="tp-brand-icon grid h-10 w-10 place-items-center rounded-xl bg-navy-900 text-white dark:bg-accent-500">
+          <i data-lucide="luggage" class="h-5 w-5"></i>
+        </span>
+        <span class="leading-tight">
+          <span class="tp-brand-name block font-display text-lg font-bold text-navy-900 dark:text-white">TravelPack</span>
+          <span class="tp-tagline block text-[11px] font-medium tracking-wide text-charcoal-500 dark:text-sand-400">Pack Smart. Travel Far.</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-1 lg:flex" aria-label="Main">
+        <div class="relative" data-dropdown>
+          <button type="button" data-dropdown-btn data-nav="home" aria-expanded="false" class="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">
+            Home <i data-lucide="chevron-down" class="h-4 w-4"></i>
+          </button>
+          <div data-dropdown-menu class="tp-dropdown-menu absolute start-0 top-full z-20 mt-2 hidden w-44 overflow-hidden rounded-xl border border-sand-200 bg-white p-1.5 shadow-xl dark:border-white/10 dark:bg-navy-900">
+            <a href="index.html" class="block rounded-lg px-3 py-2 text-sm font-medium text-navy-900 hover:bg-sand-100 dark:text-sand-200 dark:hover:bg-white/5">Home 1</a>
+            <a href="home2.html" class="block rounded-lg px-3 py-2 text-sm font-medium text-navy-900 hover:bg-sand-100 dark:text-sand-200 dark:hover:bg-white/5">Home 2</a>
+          </div>
+        </div>
+        <a href="products.html" data-nav="products" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Products</a>
+        <a href="warranty-repair.html" data-nav="warranty" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Warranty &amp; Repair</a>
+        <a href="about.html" data-nav="about" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">About</a>
+        <a href="blog.html" data-nav="blog" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Blog</a>
+        <a href="contact.html" data-nav="contact" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="hidden rounded-xl bg-navy-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-accent-500 sm:inline-flex dark:bg-accent-500 dark:hover:bg-accent-600">Visit the store</a>
+        <button type="button" id="dir-toggle" aria-label="Switch layout direction" class="flex h-10 items-center gap-1.5 rounded-xl border border-sand-200 bg-white px-3 text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
+        <button type="button" id="theme-toggle" aria-label="Toggle colour theme" class="grid h-10 w-10 place-items-center rounded-xl border border-sand-200 bg-white text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
+        <button type="button" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" class="grid h-10 w-10 place-items-center rounded-xl border border-sand-200 bg-white text-navy-900 transition hover:border-accent-500 lg:hidden dark:border-white/15 dark:bg-navy-900 dark:text-sand-200">
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="tp-mobile-panel hidden border-t border-sand-200 bg-white lg:hidden dark:border-white/10 dark:bg-navy-950">
+    <div class="max-h-[75vh] space-y-1 overflow-y-auto px-4 py-4">
+      <button type="button" data-mobile-sub-btn aria-expanded="false" data-nav="home" class="flex w-full items-center justify-between rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">
+        Home
+        <i data-lucide="chevron-down" data-chevron class="h-4 w-4 text-accent-500 transition-transform"></i>
+      </button>
+      <div data-mobile-sub class="hidden ms-3 space-y-1 border-s-2 border-sand-200 ps-3 dark:border-white/10">
+        <a href="index.html" class="block rounded-lg px-3 py-2.5 text-sm text-charcoal-600 hover:bg-sand-100 dark:text-sand-300 dark:hover:bg-white/5">Home 1</a>
+        <a href="home2.html" class="block rounded-lg px-3 py-2.5 text-sm text-charcoal-600 hover:bg-sand-100 dark:text-sand-300 dark:hover:bg-white/5">Home 2</a>
+      </div>
+      <a href="products.html" data-nav="products" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Products</a>
+      <a href="warranty-repair.html" data-nav="warranty" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Warranty &amp; Repair</a>
+      <a href="about.html" data-nav="about" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">About</a>
+      <a href="blog.html" data-nav="blog" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Blog</a>
+      <a href="contact.html" data-nav="contact" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Contact</a>
+      <a href="contact.html" class="mt-2 block rounded-xl bg-accent-500 px-3 py-3 text-center text-sm font-semibold text-white hover:bg-accent-600">Visit the store</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ============ PAGE HEAD ============ -->
+  <section class="border-b border-sand-200 bg-white py-10 sm:py-14 dark:border-white/10 dark:bg-navy-900/50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-xs font-medium text-charcoal-400 dark:text-sand-500" aria-label="Breadcrumb">
+        <a href="index.html" class="transition hover:text-accent-600">Home</a>
+        <i data-lucide="chevron-right" class="h-3.5 w-3.5 rtl:rotate-180"></i>
+        <span class="text-navy-900 dark:text-sand-200">About</span>
+      </nav>
+      <div class="mt-4 grid gap-6 lg:grid-cols-[1.3fr_1fr] lg:items-end">
+        <div>
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-azure-500/10 px-3 py-1 text-xs font-semibold text-azure-600 dark:text-azure-400">
+            <i data-lucide="store" class="h-3.5 w-3.5"></i> Established 2009 · Marine Quarter
+          </span>
+          <h1 class="mt-3 font-display text-3xl font-bold text-navy-900 sm:text-4xl dark:text-white">A luggage store built around the bags people actually carry</h1>
+          <p class="mt-3 max-w-2xl text-sm leading-relaxed text-charcoal-500 dark:text-sand-400">TravelPack started as a two-shelf corner shop on Harbour Road. Seventeen years later we stock thirty-four models, keep a repair bench out back, and still tell people when the cheaper case is the better buy.</p>
+        </div>
+        <div class="flex flex-wrap gap-3 lg:justify-end">
+          <a href="products.html" class="inline-flex items-center gap-2 rounded-xl bg-navy-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-500 dark:bg-accent-500 dark:hover:bg-accent-600">See the catalogue <i data-lucide="arrow-right" class="h-4 w-4 rtl:rotate-180"></i></a>
+          <a href="contact.html" class="inline-flex items-center gap-2 rounded-xl border border-navy-900/15 px-5 py-3 text-sm font-semibold text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:text-sand-100 dark:hover:text-accent-400">Visit us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
+        <div class="reveal relative overflow-hidden rounded-2xl border border-sand-200 dark:border-white/10">
+          <img src="https://images.pexels.com/photos/34429712/pexels-photo-34429712.jpeg?auto=compress&cs=tinysrgb&w=1100" alt="Premium luggage displayed on shelves inside the store" class="h-72 w-full object-cover sm:h-96" loading="eager" width="1100" height="733">
+          <div class="absolute bottom-3 start-3 rounded-xl bg-white/95 px-4 py-3 shadow-lg dark:bg-navy-900/95">
+            <p class="font-display text-lg font-bold text-navy-900 dark:text-white">42 Harbour Road</p>
+            <p class="text-xs text-charcoal-500 dark:text-sand-400">Same corner since 2011</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1">
+          <p class="text-xs font-bold uppercase tracking-widest text-accent-600 dark:text-accent-400">Our story</p>
+          <h2 class="mt-2 font-display text-2xl font-bold text-navy-900 sm:text-3xl dark:text-white">We started because travellers kept coming back with broken bags</h2>
+          <div class="mt-4 space-y-4 text-sm leading-relaxed text-charcoal-600 dark:text-sand-300">
+            <p>In 2009 the shop was a corner unit selling a handful of cases and a rack of duffles. The part that paid the rent was the queue of people arriving with a wheel in one hand and a receipt in the other — bags they had bought somewhere else, with nobody willing to fix them.</p>
+            <p>So we learned to repair. Then we started choosing stock by how well it survived our own bench: which wheel assemblies last, which zip gauges do not jam, which handles stay tight after a hundred departures. Everything on the floor today earned its place that way.</p>
+            <p>We do not run flash sales or badge up prices to cut them. We will happily spend twenty minutes showing you the difference between two cases, and just as happily tell you that the smaller one is the right one for your trip.</p>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-xs font-semibold text-navy-900 shadow-sm dark:bg-navy-900 dark:text-sand-200"><i data-lucide="circle-check" class="h-3.5 w-3.5 text-emerald-500"></i> Advice before the sale</span>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-xs font-semibold text-navy-900 shadow-sm dark:bg-navy-900 dark:text-sand-200"><i data-lucide="circle-check" class="h-3.5 w-3.5 text-emerald-500"></i> Repairs out back</span>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-xs font-semibold text-navy-900 shadow-sm dark:bg-navy-900 dark:text-sand-200"><i data-lucide="circle-check" class="h-3.5 w-3.5 text-emerald-500"></i> Any brand welcome</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TIMELINE ============ -->
+  <section class="border-y border-sand-200 bg-white py-12 sm:py-16 dark:border-white/10 dark:bg-navy-900/40">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <p class="text-xs font-bold uppercase tracking-widest text-accent-600 dark:text-accent-400">Milestones</p>
+        <h2 class="mt-2 font-display text-2xl font-bold text-navy-900 sm:text-3xl dark:text-white">Seventeen years, five turning points</h2>
+      </div>
+
+      <ol class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <li class="reveal relative rounded-2xl border border-sand-200 bg-sand-50 p-5 dark:border-white/10 dark:bg-navy-950/60">
+          <span class="font-display text-2xl font-bold text-accent-500">2009</span>
+          <h3 class="mt-2 font-display text-sm font-semibold text-navy-900 dark:text-white">Two shelves, one corner</h3>
+          <p class="mt-1.5 text-sm text-charcoal-500 dark:text-sand-400">TravelPack opens with nine models and a rented rack.</p>
+        </li>
+        <li class="reveal reveal-delay-1 rounded-2xl border border-sand-200 bg-sand-50 p-5 dark:border-white/10 dark:bg-navy-950/60">
+          <span class="font-display text-2xl font-bold text-accent-500">2013</span>
+          <h3 class="mt-2 font-display text-sm font-semibold text-navy-900 dark:text-white">The repair bench arrives</h3>
+          <p class="mt-1.5 text-sm text-charcoal-500 dark:text-sand-400">A back room, a wheel press and a full-time technician.</p>
+        </li>
+        <li class="reveal reveal-delay-2 rounded-2xl border border-sand-200 bg-sand-50 p-5 dark:border-white/10 dark:bg-navy-950/60">
+          <span class="font-display text-2xl font-bold text-accent-500">2017</span>
+          <h3 class="mt-2 font-display text-sm font-semibold text-navy-900 dark:text-white">Sets become the core</h3>
+          <p class="mt-1.5 text-sm text-charcoal-500 dark:text-sand-400">Families wanted matching 2–4 piece sets with one warranty.</p>
+        </li>
+        <li class="reveal reveal-delay-3 rounded-2xl border border-sand-200 bg-sand-50 p-5 dark:border-white/10 dark:bg-navy-950/60">
+          <span class="font-display text-2xl font-bold text-accent-500">2021</span>
+          <h3 class="mt-2 font-display text-sm font-semibold text-navy-900 dark:text-white">Stock went online</h3>
+          <p class="mt-1.5 text-sm text-charcoal-500 dark:text-sand-400">The full catalogue with real sizes, weights and materials.</p>
+        </li>
+        <li class="reveal rounded-2xl border border-sand-200 bg-sand-50 p-5 dark:border-white/10 dark:bg-navy-950/60">
+          <span class="font-display text-2xl font-bold text-accent-500">2026</span>
+          <h3 class="mt-2 font-display text-sm font-semibold text-navy-900 dark:text-white">Thirty-four models deep</h3>
+          <p class="mt-1.5 text-sm text-charcoal-500 dark:text-sand-400">Eight categories, one bench, the same corner shop.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ VALUES ============ -->
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <p class="text-xs font-bold uppercase tracking-widest text-accent-600 dark:text-accent-400">What we stand for</p>
+        <h2 class="mt-2 font-display text-2xl font-bold text-navy-900 sm:text-3xl dark:text-white">Four promises we keep on ordinary days</h2>
+      </div>
+
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="reveal rounded-2xl border border-sand-200 bg-white p-6 transition hover:shadow-lg dark:border-white/10 dark:bg-navy-900">
+          <span class="grid h-11 w-11 place-items-center rounded-xl bg-accent-500/10 text-accent-600 dark:text-accent-400"><i data-lucide="messages-square" class="h-5 w-5"></i></span>
+          <h3 class="mt-4 font-display text-base font-semibold text-navy-900 dark:text-white">Honest advice</h3>
+          <p class="mt-2 text-sm text-charcoal-500 dark:text-sand-400">If the lighter case suits your airline, we say so — even when it costs us the upsell.</p>
+        </div>
+        <div class="reveal reveal-delay-1 rounded-2xl border border-sand-200 bg-white p-6 transition hover:shadow-lg dark:border-white/10 dark:bg-navy-900">
+          <span class="grid h-11 w-11 place-items-center rounded-xl bg-accent-500/10 text-accent-600 dark:text-accent-400"><i data-lucide="wrench" class="h-5 w-5"></i></span>
+          <h3 class="mt-4 font-display text-base font-semibold text-navy-900 dark:text-white">Repair before replace</h3>
+          <p class="mt-2 text-sm text-charcoal-500 dark:text-sand-400">A wheel, a zip, a handle: if it can be fixed, we fix it before we sell you anything.</p>
+        </div>
+        <div class="reveal reveal-delay-2 rounded-2xl border border-sand-200 bg-white p-6 transition hover:shadow-lg dark:border-white/10 dark:bg-navy-900">
+          <span class="grid h-11 w-11 place-items-center rounded-xl bg-accent-500/10 text-accent-600 dark:text-accent-400"><i data-lucide="move" class="h-5 w-5"></i></span>
+          <h3 class="mt-4 font-display text-base font-semibold text-navy-900 dark:text-white">Try before you buy</h3>
+          <p class="mt-2 text-sm text-charcoal-500 dark:text-sand-400">Load it, roll it, lift it over the test lane. Weight on paper is not weight in your hand.</p>
+        </div>
+        <div class="reveal reveal-delay-3 rounded-2xl border border-sand-200 bg-white p-6 transition hover:shadow-lg dark:border-white/10 dark:bg-navy-900">
+          <span class="grid h-11 w-11 place-items-center rounded-xl bg-accent-500/10 text-accent-600 dark:text-accent-400"><i data-lucide="map-pin" class="h-5 w-5"></i></span>
+          <h3 class="mt-4 font-display text-base font-semibold text-navy-900 dark:text-white">Local and accountable</h3>
+          <p class="mt-2 text-sm text-charcoal-500 dark:text-sand-400">Same address, same phone number, same people handling your claim every year.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="bg-navy-900 py-12">
+    <div class="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 text-center sm:px-6 lg:grid-cols-4 lg:px-8">
+      <div class="reveal"><p class="font-display text-3xl font-bold text-white sm:text-4xl">17 yrs</p><p class="mt-1 text-xs uppercase tracking-wider text-sand-400">On Harbour Road</p></div>
+      <div class="reveal reveal-delay-1"><p class="font-display text-3xl font-bold text-white sm:text-4xl">14,000+</p><p class="mt-1 text-xs uppercase tracking-wider text-sand-400">Travellers served</p></div>
+      <div class="reveal reveal-delay-2"><p class="font-display text-3xl font-bold text-white sm:text-4xl">9,500+</p><p class="mt-1 text-xs uppercase tracking-wider text-sand-400">Repairs completed</p></div>
+      <div class="reveal reveal-delay-3"><p class="font-display text-3xl font-bold text-white sm:text-4xl">4.9 / 5</p><p class="mt-1 text-xs uppercase tracking-wider text-sand-400">Average customer rating</p></div>
+    </div>
+  </section>
+
+  <!-- ============ THE BENCH ============ -->
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
+        <div class="reveal reveal-delay-1 order-2 lg:order-1">
+          <p class="text-xs font-bold uppercase tracking-widest text-accent-600 dark:text-accent-400">Behind the shop floor</p>
+          <h2 class="mt-2 font-display text-2xl font-bold text-navy-900 sm:text-3xl dark:text-white">The bench is why the warranty means something</h2>
+          <p class="mt-3 text-sm leading-relaxed text-charcoal-500 dark:text-sand-400">Claims do not get boxed up and shipped away. They get opened on our own bench, diagnosed by our own technician and either fixed free under warranty or quoted in writing before anything chargeable starts.</p>
+          <ul class="mt-5 space-y-3 text-sm text-charcoal-600 dark:text-sand-300">
+            <li class="flex gap-2.5"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i> Wheels, axles, handles, zips, locks and shells handled in-house</li>
+            <li class="flex gap-2.5"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i> Spare parts kept for every range we have ever stocked</li>
+            <li class="flex gap-2.5"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i> Any brand accepted — bought from us or not</li>
+            <li class="flex gap-2.5"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i> Typical turnaround of three to five working days</li>
+          </ul>
+          <a href="warranty-repair.html" class="mt-6 inline-flex items-center gap-2 rounded-xl bg-navy-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-500 dark:bg-accent-500 dark:hover:bg-accent-600">Warranty &amp; repair details <i data-lucide="arrow-right" class="h-4 w-4 rtl:rotate-180"></i></a>
+        </div>
+
+        <div class="reveal order-1 grid gap-4 sm:grid-cols-2 lg:order-2">
+          <img src="https://images.pexels.com/photos/6317981/pexels-photo-6317981.jpeg?auto=compress&cs=tinysrgb&w=800" alt="An experienced craftsman repairing a bag at the workbench" class="h-56 w-full rounded-2xl border border-sand-200 object-cover sm:h-72 dark:border-white/10" loading="lazy" width="800" height="1067">
+          <img src="https://images.pexels.com/photos/30312048/pexels-photo-30312048.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Craftsman repairing luggage with tools on the bench" class="h-56 w-full rounded-2xl border border-sand-200 object-cover sm:h-72 dark:border-white/10" loading="lazy" width="800" height="1067">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PEOPLE ============ -->
+  <section class="border-y border-sand-200 bg-white py-12 sm:py-16 dark:border-white/10 dark:bg-navy-900/40">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div class="max-w-2xl">
+          <p class="text-xs font-bold uppercase tracking-widest text-accent-600 dark:text-accent-400">The team</p>
+          <h2 class="mt-2 font-display text-2xl font-bold text-navy-900 sm:text-3xl dark:text-white">Who you will meet in the store</h2>
+        </div>
+        <a href="contact.html" class="text-sm font-semibold text-accent-600 transition hover:text-accent-700 dark:text-accent-400">Book time with us →</a>
+      </div>
+
+      <div class="mt-8 grid gap-5 md:grid-cols-3">
+        <article class="reveal rounded-2xl border border-sand-200 bg-sand-50 p-6 dark:border-white/10 dark:bg-navy-950/60">
+          <span class="grid h-11 w-11 place-items-center rounded-xl bg-navy-900 text-white dark:bg-accent-500"><i data-lucide="badge-help" class="h-5 w-5"></i></span>
+          <h3 class="mt-4 font-display text-base font-semibold text-navy-900 dark:text-white">Floor advisors</h3>
+          <p class="mt-2 text-sm text-charcoal-500 dark:text-sand-400">They have travelled with every case on the shelf. Ask about airline limits, weight budgets or which shell survives a coach roof rack.</p>
+          <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-charcoal-400 dark:text-sand-500">Mon–Sat · shop floor</p>
+        </article>
+        <article class="reveal reveal-delay-1 rounded-2xl border border-sand-200 bg-sand-50 p-6 dark:border-white/10 dark:bg-navy-950/60">
+          <span class="grid h-11 w-11 place-items-center rounded-xl bg-navy-900 text-white dark:bg-accent-500"><i data-lucide="wrench" class="h-5 w-5"></i></span>
+          <h3 class="mt-4 font-display text-base font-semibold text-navy-900 dark:text-white">Bench technician</h3>
+          <p class="mt-2 text-sm text-charcoal-500 dark:text-sand-400">Diagnoses every claim, quotes chargeable work before touching it, and keeps the spare-parts wall stocked for older ranges.</p>
+          <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-charcoal-400 dark:text-sand-500">Mon–Fri · repairs</p>
+        </article>
+        <article class="reveal reveal-delay-2 rounded-2xl border border-sand-200 bg-sand-50 p-6 dark:border-white/10 dark:bg-navy-950/60">
+          <span class="grid h-11 w-11 place-items-center rounded-xl bg-navy-900 text-white dark:bg-accent-500"><i data-lucide="package-search" class="h-5 w-5"></i></span>
+          <h3 class="mt-4 font-display text-base font-semibold text-navy-900 dark:text-white">Range buyer</h3>
+          <p class="mt-2 text-sm text-charcoal-500 dark:text-sand-400">Tests incoming models against the bench data — wheel life, zip gauges, handle play — before anything reaches the floor.</p>
+          <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-charcoal-400 dark:text-sand-500">Monthly · buying trips</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VISIT ============ -->
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid overflow-hidden rounded-2xl border border-sand-200 bg-white lg:grid-cols-2 dark:border-white/10 dark:bg-navy-900">
+        <img src="https://images.pexels.com/photos/13111695/pexels-photo-13111695.jpeg?auto=compress&cs=tinysrgb&w=1100" alt="Travellers carrying luggage through the terminal" class="h-60 w-full object-cover sm:h-80 lg:h-full" loading="lazy" width="1100" height="733">
+        <div class="p-6 sm:p-10">
+          <p class="text-xs font-bold uppercase tracking-widest text-accent-600 dark:text-accent-400">Come in</p>
+          <h2 class="mt-2 font-display text-2xl font-bold text-navy-900 dark:text-white">Bring your shortlist — or your broken bag</h2>
+          <p class="mt-3 text-sm leading-relaxed text-charcoal-500 dark:text-sand-400">The catalogue is on the floor, the test lane is clear and the bench is through the back. Book a slot if you want a particular set laid out for you.</p>
+          <ul class="mt-5 space-y-3 text-sm text-charcoal-600 dark:text-sand-300">
+            <li class="flex gap-2.5"><i data-lucide="map-pin" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i> 42 Harbour Road, Marine Quarter, Portside 4021</li>
+            <li class="flex gap-2.5"><i data-lucide="clock" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i> Mon–Fri 10:00–20:00 · Sat 10:00–21:00 · Sun closed</li>
+            <li class="flex gap-2.5"><i data-lucide="phone" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i> +1 (555) 014-2288</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="contact.html" class="inline-flex items-center gap-2 rounded-xl bg-navy-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-500 dark:bg-accent-500 dark:hover:bg-accent-600">Book a store visit</a>
+            <a href="blog.html" class="inline-flex items-center gap-2 rounded-xl border border-navy-900/15 px-5 py-3 text-sm font-semibold text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:text-sand-100 dark:hover:text-accent-400">Read the journal</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="bg-accent-500 py-12">
+    <div class="mx-auto flex max-w-7xl flex-col items-center gap-5 px-4 text-center sm:px-6 lg:px-8">
+      <div>
+        <h2 class="font-display text-2xl font-bold text-white sm:text-3xl">Pack Smart. Travel Far.</h2>
+        <p class="mt-2 text-sm text-white/90">Thirty-four models, eight categories and a repair bench behind every one of them.</p>
+      </div>
+      <div class="flex flex-col gap-3 sm:flex-row">
+        <a href="products.html" class="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-navy-900 transition hover:bg-navy-900 hover:text-white">View products</a>
+        <a href="warranty-repair.html" class="inline-flex items-center gap-2 rounded-xl border border-white/50 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10">Warranty &amp; repair</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-navy-950 text-sand-300">
+  <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4 lg:px-8">
+    <div>
+      <a href="index.html" class="flex items-center gap-2.5">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-accent-500 text-white"><i data-lucide="luggage" class="h-5 w-5"></i></span>
+        <span class="leading-tight">
+          <span class="block font-display text-lg font-bold text-white">TravelPack</span>
+          <span class="block text-[11px] text-sand-400">Pack Smart. Travel Far.</span>
+        </span>
+      </a>
+      <p class="mt-4 text-sm leading-relaxed text-sand-400">A local luggage and travel bag store selling cabin cases, check-in luggage, sets, backpacks and accessories — with an in-house repair bench behind every purchase.</p>
+      <div class="mt-5 flex gap-3">
+        <a href="#" aria-label="TravelPack on Instagram" class="grid h-9 w-9 place-items-center rounded-lg border border-white/15 text-sand-300 transition hover:border-accent-500 hover:text-accent-400"><i data-lucide="instagram" class="h-4 w-4"></i></a>
+        <a href="#" aria-label="TravelPack on Facebook" class="grid h-9 w-9 place-items-center rounded-lg border border-white/15 text-sand-300 transition hover:border-accent-500 hover:text-accent-400"><i data-lucide="facebook" class="h-4 w-4"></i></a>
+        <a href="#" aria-label="TravelPack on YouTube" class="grid h-9 w-9 place-items-center rounded-lg border border-white/15 text-sand-300 transition hover:border-accent-500 hover:text-accent-400"><i data-lucide="youtube" class="h-4 w-4"></i></a>
+      </div>
+    </div>
+    <div>
+      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-white">Shop</h3>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        <li><a href="products.html?type=Cabin%20Luggage" class="text-sand-400 transition hover:text-accent-400">Cabin luggage</a></li>
+        <li><a href="products.html?type=Check-in%20Luggage" class="text-sand-400 transition hover:text-accent-400">Check-in luggage</a></li>
+        <li><a href="products.html?type=Luggage%20Sets" class="text-sand-400 transition hover:text-accent-400">Luggage sets</a></li>
+        <li><a href="products.html?type=Travel%20Backpacks" class="text-sand-400 transition hover:text-accent-400">Travel backpacks</a></li>
+        <li><a href="products.html?type=Duffle%20Bags" class="text-sand-400 transition hover:text-accent-400">Duffle bags</a></li>
+        <li><a href="products.html" class="text-sand-400 transition hover:text-accent-400">All products</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-white">Customer care</h3>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        <li><a href="about.html" class="text-sand-400 transition hover:text-accent-400">About us</a></li>
+        <li><a href="blog.html" class="text-sand-400 transition hover:text-accent-400">Blog</a></li>
+        <li><a href="warranty-repair.html" class="text-sand-400 transition hover:text-accent-400">Warranty &amp; repair</a></li>
+        <li><a href="warranty-repair.html#repair-form" class="text-sand-400 transition hover:text-accent-400">Submit a repair enquiry</a></li>
+        <li><a href="contact.html" class="text-sand-400 transition hover:text-accent-400">Contact &amp; store visit</a></li>
+        <li><a href="index.html#faq-anchor" class="text-sand-400 transition hover:text-accent-400">FAQ</a></li>
+        <li><a href="404.html" class="text-sand-400 transition hover:text-accent-400">Page not found</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-white">Visit the store</h3>
+      <ul class="mt-4 space-y-3 text-sm text-sand-400">
+        <li class="flex gap-2.5"><i data-lucide="map-pin" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><span>42 Harbour Road, Marine Quarter, Portside 4021</span></li>
+        <li class="flex gap-2.5"><i data-lucide="phone" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><a href="tel:+15550142288" class="transition hover:text-accent-400">+1 (555) 014-2288</a></li>
+        <li class="flex gap-2.5"><i data-lucide="mail" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><a href="mailto:hello@travelpack.store" class="transition hover:text-accent-400">hello@travelpack.store</a></li>
+        <li class="flex gap-2.5"><i data-lucide="clock" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><span>Mon–Fri 10:00–20:00<br>Sat 10:00–21:00 · Sun closed</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-sand-500 sm:flex-row sm:px-6 lg:px-8">
+      <p>© <span data-year>2026</span> TravelPack. Pack Smart. Travel Far.</p>
+      <p>Demo storefront — enquiries are stored on this device only. No accounts or online payments.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" type="button" aria-label="Back to top" class="fixed bottom-4 start-4 z-40 grid h-11 w-11 place-items-center rounded-full bg-navy-900 text-white shadow-lg transition hover:bg-accent-500 dark:bg-accent-500 dark:hover:bg-accent-600">
+  <i data-lucide="arrow-up" class="h-5 w-5"></i>
+</button>
+
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warranty &amp; Repair — TravelPack | Claims, Service and Repair Bench</title>
+<meta name="description" content="TravelPack warranty terms, what is covered, the three-step claim process and our in-house repair bench for wheels, handles, zips, locks and shells — plus a repair enquiry form.">
+<script>(function(){try{var t=localStorage.getItem('travelpack_theme');if(t!=='dark'&&t!=='light'){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}var d=localStorage.getItem('travelpack_direction');document.documentElement.setAttribute('dir',d==='rtl'?'rtl':'ltr');}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        navy: {50:'#f1f6fb',100:'#e2ecf7',200:'#c2d7ee',300:'#93b5db',400:'#5e8fc3',500:'#3c71ae',600:'#2a5790',700:'#224674',800:'#1b365a',900:'#122745',950:'#0a1a30'},
+        charcoal: {50:'#f6f7f8',100:'#eceef0',200:'#d5d9de',300:'#b0b8c1',400:'#8590a0',500:'#67748a',600:'#535d73',700:'#434b5e',800:'#3a4150',900:'#2a2f3b',950:'#1a1d25'},
+        sand: {50:'#faf8f4',100:'#f4efe6',200:'#eadfce',300:'#dcc8a5',400:'#cdb083',500:'#bf9a66',600:'#a98153',700:'#8c6745',800:'#73543c',900:'#5f4633'},
+        accent: {400:'#fb923c',500:'#f97316',600:'#ea580c',700:'#c2410c'},
+        azure: {400:'#5b9cf5',500:'#2f80ed',600:'#1f6ad4',700:'#1a55ab'}
+      },
+      fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['Outfit','Inter','sans-serif'] }
+    }
+  }
+};
+</script>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/main.js" defer></script>
+<script src="js/nav.js" defer></script>
+<script src="js/warranty.js" defer></script>
+</head>
+<body data-page="warranty" class="bg-sand-50 text-charcoal-700 dark:bg-navy-950 dark:text-sand-200 antialiased">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="sticky top-0 z-50 border-b border-sand-200 bg-white/90 backdrop-blur transition-shadow dark:border-white/10 dark:bg-navy-950/90">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between gap-3 lg:h-20">
+      <a href="index.html" class="flex shrink-0 items-center gap-2.5">
+        <span class="tp-brand-icon grid h-10 w-10 place-items-center rounded-xl bg-navy-900 text-white dark:bg-accent-500">
+          <i data-lucide="luggage" class="h-5 w-5"></i>
+        </span>
+        <span class="leading-tight">
+          <span class="tp-brand-name block font-display text-lg font-bold text-navy-900 dark:text-white">TravelPack</span>
+          <span class="tp-tagline block text-[11px] font-medium tracking-wide text-charcoal-500 dark:text-sand-400">Pack Smart. Travel Far.</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-1 lg:flex" aria-label="Main">
+        <div class="relative" data-dropdown>
+          <button type="button" data-dropdown-btn data-nav="home" aria-expanded="false" class="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">
+            Home <i data-lucide="chevron-down" class="h-4 w-4"></i>
+          </button>
+          <div data-dropdown-menu class="tp-dropdown-menu absolute start-0 top-full z-20 mt-2 hidden w-44 overflow-hidden rounded-xl border border-sand-200 bg-white p-1.5 shadow-xl dark:border-white/10 dark:bg-navy-900">
+            <a href="index.html" class="block rounded-lg px-3 py-2 text-sm font-medium text-navy-900 hover:bg-sand-100 dark:text-sand-200 dark:hover:bg-white/5">Home 1</a>
+            <a href="home2.html" class="block rounded-lg px-3 py-2 text-sm font-medium text-navy-900 hover:bg-sand-100 dark:text-sand-200 dark:hover:bg-white/5">Home 2</a>
+          </div>
+        </div>
+        <a href="products.html" data-nav="products" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Products</a>
+        <a href="warranty-repair.html" data-nav="warranty" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Warranty &amp; Repair</a>
+        <a href="about.html" data-nav="about" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">About</a>
+        <a href="blog.html" data-nav="blog" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Blog</a>
+        <a href="contact.html" data-nav="contact" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="warranty-repair.html#repair-form" class="hidden rounded-xl bg-navy-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-accent-500 sm:inline-flex dark:bg-accent-500 dark:hover:bg-accent-600">Request a repair</a>
+        <button type="button" id="dir-toggle" aria-label="Switch layout direction" class="flex h-10 items-center gap-1.5 rounded-xl border border-sand-200 bg-white px-3 text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
+        <button type="button" id="theme-toggle" aria-label="Toggle colour theme" class="grid h-10 w-10 place-items-center rounded-xl border border-sand-200 bg-white text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
+        <button type="button" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" class="grid h-10 w-10 place-items-center rounded-xl border border-sand-200 bg-white text-navy-900 transition hover:border-accent-500 lg:hidden dark:border-white/15 dark:bg-navy-900 dark:text-sand-200">
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="tp-mobile-panel hidden border-t border-sand-200 bg-white lg:hidden dark:border-white/10 dark:bg-navy-950">
+    <div class="max-h-[75vh] space-y-1 overflow-y-auto px-4 py-4">
+      <button type="button" data-mobile-sub-btn aria-expanded="false" data-nav="home" class="flex w-full items-center justify-between rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">
+        Home
+        <i data-lucide="chevron-down" data-chevron class="h-4 w-4 text-accent-500 transition-transform"></i>
+      </button>
+      <div data-mobile-sub class="hidden ms-3 space-y-1 border-s-2 border-sand-200 ps-3 dark:border-white/10">
+        <a href="index.html" class="block rounded-lg px-3 py-2.5 text-sm text-charcoal-600 hover:bg-sand-100 dark:text-sand-300 dark:hover:bg-white/5">Home 1</a>
+        <a href="home2.html" class="block rounded-lg px-3 py-2.5 text-sm text-charcoal-600 hover:bg-sand-100 dark:text-sand-300 dark:hover:bg-white/5">Home 2</a>
+      </div>
+      <a href="products.html" data-nav="products" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Products</a>
+      <a href="warranty-repair.html" data-nav="warranty" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Warranty &amp; Repair</a>
+      <a href="about.html" data-nav="about" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">About</a>
+      <a href="blog.html" data-nav="blog" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Blog</a>
+      <a href="contact.html" data-nav="contact" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Contact</a>
+      <a href="warranty-repair.html#repair-form" class="mt-2 block rounded-xl bg-accent-500 px-3 py-3 text-center text-sm font-semibold text-white hover:bg-accent-600">Request a repair</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ============ PAGE HEAD ============ -->
+  <section class="border-b border-sand-200 bg-white py-10 sm:py-14 dark:border-white/10 dark:bg-navy-900/50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-xs font-medium text-charcoal-400 dark:text-sand-500" aria-label="Breadcrumb">
+        <a href="index.html" class="transition hover:text-accent-600">Home</a>
+        <i data-lucide="chevron-right" class="h-3.5 w-3.5 rtl:rotate-180"></i>
+        <span class="text-navy-900 dark:text-sand-200">Warranty &amp; Repair</span>
+      </nav>
+      <div class="mt-4 grid gap-6 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+        <div>
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-accent-500/10 px-3 py-1 text-xs font-semibold text-accent-600 dark:text-accent-400">
+            <i data-lucide="badge-check" class="h-3.5 w-3.5"></i> In-house service bench
+          </span>
+          <h1 class="mt-3 font-display text-3xl font-bold text-navy-900 sm:text-4xl dark:text-white">Warranty &amp; repair, handled by the people who sold it</h1>
+          <p class="mt-3 max-w-2xl text-sm leading-relaxed text-charcoal-500 dark:text-sand-400">We log every claim at the counter, diagnose it at our own bench and chase the manufacturer for you. Out-of-warranty work is always quoted in writing before a single screw comes out.</p>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="#repair-form" class="inline-flex items-center gap-2 rounded-xl bg-navy-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-500 dark:bg-accent-500 dark:hover:bg-accent-600">Submit a repair enquiry <i data-lucide="arrow-down" class="h-4 w-4 rtl:rotate-180"></i></a>
+            <a href="#covered" class="inline-flex items-center gap-2 rounded-xl border border-navy-900/15 px-5 py-3 text-sm font-semibold text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:text-sand-100 dark:hover:text-accent-400">See what is covered</a>
+          </div>
+          <p id="repair-count" class="mt-4 text-xs font-medium text-charcoal-400 dark:text-sand-500"></p>
+        </div>
+        <div class="relative overflow-hidden rounded-2xl border border-sand-200 shadow-sm dark:border-white/10">
+          <img src="https://images.pexels.com/photos/30312048/pexels-photo-30312048.jpeg?auto=compress&cs=tinysrgb&w=1100" alt="Technician servicing a suitcase wheel at a repair bench" class="h-64 w-full object-cover sm:h-72" loading="eager" width="1100" height="733">
+          <div class="absolute bottom-3 start-3 flex items-center gap-2 rounded-lg bg-white/95 px-3 py-2 text-xs font-semibold text-navy-900 shadow dark:bg-navy-900/95 dark:text-sand-100">
+            <i data-lucide="wrench" class="h-4 w-4 text-accent-500"></i> Average turnaround: 3–5 working days
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COVERED / NOT COVERED ============ -->
+  <section id="covered" class="scroll-mt-24 py-12 sm:py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <p class="text-xs font-bold uppercase tracking-widest text-accent-600 dark:text-accent-400">Coverage</p>
+        <h2 class="mt-2 font-display text-2xl font-bold text-navy-900 sm:text-3xl dark:text-white">What the warranty covers</h2>
+        <p class="mt-3 text-sm leading-relaxed text-charcoal-500 dark:text-sand-400">Cover runs from the date on your receipt: 3 years on value ranges, 5 years on core ranges and 7 years on premium polycarbonate shells.</p>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-emerald-200 bg-white p-6 dark:border-emerald-500/25 dark:bg-navy-900">
+          <h3 class="flex items-center gap-2 font-display text-lg font-semibold text-navy-900 dark:text-white">
+            <span class="grid h-8 w-8 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-500/15 dark:text-emerald-400"><i data-lucide="check" class="h-4 w-4"></i></span>
+            Covered
+          </h3>
+          <ul class="mt-4 space-y-3 text-sm text-charcoal-600 dark:text-sand-300">
+            <li class="flex gap-2.5"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i> Wheel, axle and spinner failures in normal use</li>
+            <li class="flex gap-2.5"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i> Telescopic handle stems that jam, slip or won't lock</li>
+            <li class="flex gap-2.5"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i> Zip teeth splitting and slider separation</li>
+            <li class="flex gap-2.5"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i> TSA lock and number-lock mechanism defects</li>
+            <li class="flex gap-2.5"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i> Shell cracks and handle mounts on the frame</li>
+            <li class="flex gap-2.5"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i> Stitching and lining failure on soft-side cases and bags</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-sand-300 bg-white p-6 dark:border-white/10 dark:bg-navy-900">
+          <h3 class="flex items-center gap-2 font-display text-lg font-semibold text-navy-900 dark:text-white">
+            <span class="grid h-8 w-8 place-items-center rounded-full bg-sand-200 text-charcoal-600 dark:bg-white/10 dark:text-sand-300"><i data-lucide="x" class="h-4 w-4"></i></span>
+            Not covered
+          </h3>
+          <ul class="mt-4 space-y-3 text-sm text-charcoal-600 dark:text-sand-300">
+            <li class="flex gap-2.5"><i data-lucide="circle-x" class="mt-0.5 h-4 w-4 shrink-0 text-charcoal-400"></i> Airline and baggage-handler damage (crush, impact, scuffs)</li>
+            <li class="flex gap-2.5"><i data-lucide="circle-x" class="mt-0.5 h-4 w-4 shrink-0 text-charcoal-400"></i> Over-packing, dropped or dragged cases</li>
+            <li class="flex gap-2.5"><i data-lucide="circle-x" class="mt-0.5 h-4 w-4 shrink-0 text-charcoal-400"></i> Cosmetic wear: scratches, faded shell, worn corners</li>
+            <li class="flex gap-2.5"><i data-lucide="circle-x" class="mt-0.5 h-4 w-4 shrink-0 text-charcoal-400"></i> Lost keys, forgotten combinations, cut locks</li>
+            <li class="flex gap-2.5"><i data-lucide="circle-x" class="mt-0.5 h-4 w-4 shrink-0 text-charcoal-400"></i> Bags modified, repaired elsewhere or used for hire</li>
+            <li class="flex gap-2.5"><i data-lucide="circle-x" class="mt-0.5 h-4 w-4 shrink-0 text-charcoal-400"></i> Second-hand purchases without an original receipt</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-6 rounded-2xl bg-navy-900 p-6 text-sand-300 dark:bg-navy-900/70">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+          <i data-lucide="file-text" class="h-6 w-6 shrink-0 text-accent-400"></i>
+          <p class="text-sm leading-relaxed"><span class="font-semibold text-white">Keep your receipt.</span> A digital photo or card statement is enough — bring it to the counter or attach it to the enquiry form below. Without proof of purchase we can still repair the bag, but as chargeable out-of-warranty work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLAIM PROCESS ============ -->
+  <section class="border-y border-sand-200 bg-white py-12 sm:py-16 dark:border-white/10 dark:bg-navy-900/40">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <p class="text-xs font-bold uppercase tracking-widest text-accent-600 dark:text-accent-400">Process</p>
+        <h2 class="mt-2 font-display text-2xl font-bold text-navy-900 sm:text-3xl dark:text-white">How a claim runs, start to finish</h2>
+      </div>
+      <ol class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <li class="reveal rounded-2xl border border-sand-200 bg-sand-50 p-5 dark:border-white/10 dark:bg-navy-950/60">
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-navy-900 font-display text-sm font-bold text-white dark:bg-accent-500">1</span>
+          <h3 class="mt-4 font-display text-base font-semibold text-navy-900 dark:text-white">Tell us what happened</h3>
+          <p class="mt-2 text-sm text-charcoal-500 dark:text-sand-400">Fill the form below or bring the bag in. Photos of the fault speed everything up.</p>
+        </li>
+        <li class="reveal reveal-delay-1 rounded-2xl border border-sand-200 bg-sand-50 p-5 dark:border-white/10 dark:bg-navy-950/60">
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-navy-900 font-display text-sm font-bold text-white dark:bg-accent-500">2</span>
+          <h3 class="mt-4 font-display text-base font-semibold text-navy-900 dark:text-white">Diagnosis at the bench</h3>
+          <p class="mt-2 text-sm text-charcoal-500 dark:text-sand-400">We open it up, confirm the cause and decide warranty or chargeable work.</p>
+        </li>
+        <li class="reveal reveal-delay-2 rounded-2xl border border-sand-200 bg-sand-50 p-5 dark:border-white/10 dark:bg-navy-950/60">
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-navy-900 font-display text-sm font-bold text-white dark:bg-accent-500">3</span>
+          <h3 class="mt-4 font-display text-base font-semibold text-navy-900 dark:text-white">Written quote, then work</h3>
+          <p class="mt-2 text-sm text-charcoal-500 dark:text-sand-400">Warranty jobs proceed free. Anything else waits for your yes on paper.</p>
+        </li>
+        <li class="reveal reveal-delay-3 rounded-2xl border border-sand-200 bg-sand-50 p-5 dark:border-white/10 dark:bg-navy-950/60">
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-navy-900 font-display text-sm font-bold text-white dark:bg-accent-500">4</span>
+          <h3 class="mt-4 font-display text-base font-semibold text-navy-900 dark:text-white">Collect or we deliver</h3>
+          <p class="mt-2 text-sm text-charcoal-500 dark:text-sand-400">Typical turnaround is 3–5 working days; parts orders may take longer.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ SERVICE MENU ============ -->
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-6 lg:grid-cols-3">
+        <div class="reveal lg:col-span-2">
+          <p class="text-xs font-bold uppercase tracking-widest text-accent-600 dark:text-accent-400">Repair bench</p>
+          <h2 class="mt-2 font-display text-2xl font-bold text-navy-900 sm:text-3xl dark:text-white">What we fix, for any brand</h2>
+          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+            <div class="flex gap-3 rounded-xl border border-sand-200 bg-white p-4 dark:border-white/10 dark:bg-navy-900">
+              <i data-lucide="circle-dot" class="mt-0.5 h-5 w-5 shrink-0 text-accent-500"></i>
+              <div><h3 class="text-sm font-semibold text-navy-900 dark:text-white">Wheel &amp; axle replacement</h3><p class="mt-1 text-sm text-charcoal-500 dark:text-sand-400">Spinner and inline wheels, any diameter in stock.</p></div>
+            </div>
+            <div class="flex gap-3 rounded-xl border border-sand-200 bg-white p-4 dark:border-white/10 dark:bg-navy-900">
+              <i data-lucide="move-vertical" class="mt-0.5 h-5 w-5 shrink-0 text-accent-500"></i>
+              <div><h3 class="text-sm font-semibold text-navy-900 dark:text-white">Handle systems</h3><p class="mt-1 text-sm text-charcoal-500 dark:text-sand-400">Telescopic tubes, buttons, top and side carry handles.</p></div>
+            </div>
+            <div class="flex gap-3 rounded-xl border border-sand-200 bg-white p-4 dark:border-white/10 dark:bg-navy-900">
+              <i data-lucide="unfold-horizontal" class="mt-0.5 h-5 w-5 shrink-0 text-accent-500"></i>
+              <div><h3 class="text-sm font-semibold text-navy-900 dark:text-white">Zips &amp; sliders</h3><p class="mt-1 text-sm text-charcoal-500 dark:text-sand-400">Replacements, re-stitching and slider re-joins.</p></div>
+            </div>
+            <div class="flex gap-3 rounded-xl border border-sand-200 bg-white p-4 dark:border-white/10 dark:bg-navy-900">
+              <i data-lucide="lock" class="mt-0.5 h-5 w-5 shrink-0 text-accent-500"></i>
+              <div><h3 class="text-sm font-semibold text-navy-900 dark:text-white">Locks &amp; TSA keys</h3><p class="mt-1 text-sm text-charcoal-500 dark:text-sand-400">Number locks re-cut, TSA cores replaced.</p></div>
+            </div>
+            <div class="flex gap-3 rounded-xl border border-sand-200 bg-white p-4 dark:border-white/10 dark:bg-navy-900">
+              <i data-lucide="shield" class="mt-0.5 h-5 w-5 shrink-0 text-accent-500"></i>
+              <div><h3 class="text-sm font-semibold text-navy-900 dark:text-white">Shell &amp; frame repair</h3><p class="mt-1 text-sm text-charcoal-500 dark:text-sand-400">Crack patches, hinge pins, corner guards.</p></div>
+            </div>
+            <div class="flex gap-3 rounded-xl border border-sand-200 bg-white p-4 dark:border-white/10 dark:bg-navy-900">
+              <i data-lucide="scissors" class="mt-0.5 h-5 w-5 shrink-0 text-accent-500"></i>
+              <div><h3 class="text-sm font-semibold text-navy-900 dark:text-white">Bags &amp; backpacks</h3><p class="mt-1 text-sm text-charcoal-500 dark:text-sand-400">Straps, buckles, seams and lining re-stitched.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="reveal reveal-delay-1 rounded-2xl border border-sand-200 bg-white p-6 dark:border-white/10 dark:bg-navy-900">
+          <h3 class="font-display text-lg font-semibold text-navy-900 dark:text-white">Good to know</h3>
+          <ul class="mt-4 space-y-4 text-sm text-charcoal-600 dark:text-sand-300">
+            <li class="flex gap-2.5"><i data-lucide="clock" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i><span>Bench hours: Mon–Fri 10:00–18:00, Sat 10:00–16:00.</span></li>
+            <li class="flex gap-2.5"><i data-lucide="receipt" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i><span>Written quote before chargeable work — always.</span></li>
+            <li class="flex gap-2.5"><i data-lucide="package-check" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i><span>Most parts held in store; special orders 7–10 days.</span></li>
+            <li class="flex gap-2.5"><i data-lucide="tag" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i><span>Typical wheel swap from $25; quoted per job.</span></li>
+            <li class="flex gap-2.5"><i data-lucide="globe" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i><span>Any brand welcome — you do not have to have bought it here.</span></li>
+          </ul>
+          <a href="contact.html" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-navy-900/15 px-4 py-3 text-sm font-semibold text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:text-sand-100 dark:hover:text-accent-400">Store directions &amp; hours</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REPAIR FORM ============ -->
+  <section id="repair" class="border-t border-sand-200 bg-white py-12 sm:py-16 dark:border-white/10 dark:bg-navy-900/40">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-start">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-widest text-accent-600 dark:text-accent-400">Enquiry form</p>
+          <h2 class="mt-2 font-display text-2xl font-bold text-navy-900 sm:text-3xl dark:text-white">Request a repair or warranty check</h2>
+          <p class="mt-3 text-sm leading-relaxed text-charcoal-500 dark:text-sand-400">Tell us the bag, the fault and how to reach you. You will get a reference number on submit; our technician calls within one working day to arrange drop-off.</p>
+
+          <div class="mt-6 space-y-4 rounded-2xl border border-sand-200 bg-sand-50 p-5 dark:border-white/10 dark:bg-navy-950/60">
+            <div class="flex gap-3"><i data-lucide="phone-call" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i><p class="text-sm text-charcoal-600 dark:text-sand-300">Urgent trip? Call the store on <a href="tel:+15550142288" class="font-semibold text-navy-900 underline decoration-accent-500 underline-offset-4 dark:text-white">+1 (555) 014-2288</a>.</p></div>
+            <div class="flex gap-3"><i data-lucide="camera" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i><p class="text-sm text-charcoal-600 dark:text-sand-300">Photos of the fault can be sent to <a href="mailto:repairs@travelpack.store" class="font-semibold text-navy-900 underline decoration-accent-500 underline-offset-4 dark:text-white">repairs@travelpack.store</a> with your reference number.</p></div>
+            <div class="flex gap-3"><i data-lucide="shield-check" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i><p class="text-sm text-charcoal-600 dark:text-sand-300">Submissions stay on this device — this demo storefront has no server or account system.</p></div>
+          </div>
+        </div>
+
+        <form id="repair-form" class="scroll-mt-24 rounded-2xl border border-sand-200 bg-sand-50 p-5 sm:p-7 dark:border-white/10 dark:bg-navy-950/60" novalidate>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="field">
+              <label for="r-name" class="mb-1.5 block text-xs font-semibold text-navy-900 dark:text-sand-200">Full name <span class="text-accent-600">*</span></label>
+              <input id="r-name" type="text" name="name" class="tp-input" placeholder="Alex Rivera" autocomplete="name" data-validate="required,min3">
+              <p class="error-text" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="r-phone" class="mb-1.5 block text-xs font-semibold text-navy-900 dark:text-sand-200">Phone <span class="text-accent-600">*</span></label>
+              <input id="r-phone" type="tel" name="phone" class="tp-input" placeholder="+1 555 010 2233" autocomplete="tel" data-validate="required,phone">
+              <p class="error-text" role="alert"></p>
+            </div>
+            <div class="field sm:col-span-2">
+              <label for="r-email" class="mb-1.5 block text-xs font-semibold text-navy-900 dark:text-sand-200">Email <span class="text-accent-600">*</span></label>
+              <input id="r-email" type="email" name="email" class="tp-input" placeholder="you@example.com" autocomplete="email" data-validate="required,email">
+              <p class="error-text" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="r-product" class="mb-1.5 block text-xs font-semibold text-navy-900 dark:text-sand-200">Product type <span class="text-accent-600">*</span></label>
+              <select id="r-product" name="product" class="tp-input" data-validate="required">
+                <option value="">Select a product…</option>
+                <option>Cabin luggage</option>
+                <option>Check-in luggage</option>
+                <option>Luggage set</option>
+                <option>Travel backpack</option>
+                <option>Duffle bag</option>
+                <option>Laptop / travel bag</option>
+                <option>Trolley bag</option>
+                <option>Other brand (not bought here)</option>
+              </select>
+              <p class="error-text" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="r-date" class="mb-1.5 block text-xs font-semibold text-navy-900 dark:text-sand-200">Purchase date</label>
+              <input id="r-date" type="date" name="purchase_date" class="tp-input">
+              <p class="error-text" role="alert"></p>
+            </div>
+            <div class="field sm:col-span-2">
+              <label for="r-issue" class="mb-1.5 block text-xs font-semibold text-navy-900 dark:text-sand-200">What is wrong? <span class="text-accent-600">*</span></label>
+              <select id="r-issue" name="issue" class="tp-input" data-validate="required">
+                <option value="">Select the fault…</option>
+                <option>Wheel or axle problem</option>
+                <option>Telescopic handle problem</option>
+                <option>Zip broken or stuck</option>
+                <option>Lock or TSA key problem</option>
+                <option>Cracked shell or broken frame</option>
+                <option>Strap, buckle or stitching</option>
+                <option>Not sure — needs diagnosis</option>
+              </select>
+              <p class="error-text" role="alert"></p>
+            </div>
+            <div class="field sm:col-span-2">
+              <label for="r-message" class="mb-1.5 block text-xs font-semibold text-navy-900 dark:text-sand-200">Details <span class="text-accent-600">*</span></label>
+              <textarea id="r-message" name="message" rows="4" class="tp-input" placeholder="Describe the fault, when it started and your trip date if it is urgent…" data-validate="required,min10"></textarea>
+              <p class="error-text" role="alert"></p>
+            </div>
+          </div>
+
+          <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <button type="submit" class="inline-flex items-center justify-center gap-2 rounded-xl bg-navy-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent-500 dark:bg-accent-500 dark:hover:bg-accent-600">
+              Submit repair enquiry <i data-lucide="send" class="h-4 w-4 rtl:rotate-180"></i>
+            </button>
+            <p class="text-xs text-charcoal-400 dark:text-sand-500">No payment is taken at any point.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="bg-accent-500 py-12">
+    <div class="mx-auto flex max-w-7xl flex-col items-center gap-5 px-4 text-center sm:px-6 lg:px-8">
+      <div>
+        <h2 class="font-display text-2xl font-bold text-white sm:text-3xl">Browsing before you commit?</h2>
+        <p class="mt-2 text-sm text-white/90">See the full catalogue with warranty terms on every model.</p>
+      </div>
+      <div class="flex flex-col gap-3 sm:flex-row">
+        <a href="products.html" class="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-navy-900 transition hover:bg-navy-900 hover:text-white">View products</a>
+        <a href="contact.html" class="inline-flex items-center gap-2 rounded-xl border border-white/50 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10">Visit the store</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-navy-950 text-sand-300">
+  <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4 lg:px-8">
+    <div>
+      <a href="index.html" class="flex items-center gap-2.5">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-accent-500 text-white"><i data-lucide="luggage" class="h-5 w-5"></i></span>
+        <span class="leading-tight">
+          <span class="block font-display text-lg font-bold text-white">TravelPack</span>
+          <span class="block text-[11px] text-sand-400">Pack Smart. Travel Far.</span>
+        </span>
+      </a>
+      <p class="mt-4 text-sm leading-relaxed text-sand-400">A local luggage and travel bag store selling cabin cases, check-in luggage, sets, backpacks and accessories — with an in-house repair bench behind every purchase.</p>
+      <div class="mt-5 flex gap-3">
+        <a href="#" aria-label="TravelPack on Instagram" class="grid h-9 w-9 place-items-center rounded-lg border border-white/15 text-sand-300 transition hover:border-accent-500 hover:text-accent-400"><i data-lucide="instagram" class="h-4 w-4"></i></a>
+        <a href="#" aria-label="TravelPack on Facebook" class="grid h-9 w-9 place-items-center rounded-lg border border-white/15 text-sand-300 transition hover:border-accent-500 hover:text-accent-400"><i data-lucide="facebook" class="h-4 w-4"></i></a>
+        <a href="#" aria-label="TravelPack on YouTube" class="grid h-9 w-9 place-items-center rounded-lg border border-white/15 text-sand-300 transition hover:border-accent-500 hover:text-accent-400"><i data-lucide="youtube" class="h-4 w-4"></i></a>
+      </div>
+    </div>
+    <div>
+      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-white">Shop</h3>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        <li><a href="products.html?type=Cabin%20Luggage" class="text-sand-400 transition hover:text-accent-400">Cabin luggage</a></li>
+        <li><a href="products.html?type=Check-in%20Luggage" class="text-sand-400 transition hover:text-accent-400">Check-in luggage</a></li>
+        <li><a href="products.html?type=Luggage%20Sets" class="text-sand-400 transition hover:text-accent-400">Luggage sets</a></li>
+        <li><a href="products.html?type=Travel%20Backpacks" class="text-sand-400 transition hover:text-accent-400">Travel backpacks</a></li>
+        <li><a href="products.html?type=Duffle%20Bags" class="text-sand-400 transition hover:text-accent-400">Duffle bags</a></li>
+        <li><a href="products.html" class="text-sand-400 transition hover:text-accent-400">All products</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-white">Customer care</h3>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        <li><a href="about.html" class="text-sand-400 transition hover:text-accent-400">About us</a></li>
+        <li><a href="blog.html" class="text-sand-400 transition hover:text-accent-400">Blog</a></li>
+        <li><a href="warranty-repair.html" class="text-sand-400 transition hover:text-accent-400">Warranty &amp; repair</a></li>
+        <li><a href="warranty-repair.html#repair-form" class="text-sand-400 transition hover:text-accent-400">Submit a repair enquiry</a></li>
+        <li><a href="contact.html" class="text-sand-400 transition hover:text-accent-400">Contact &amp; store visit</a></li>
+        <li><a href="index.html#faq-anchor" class="text-sand-400 transition hover:text-accent-400">FAQ</a></li>
+        <li><a href="404.html" class="text-sand-400 transition hover:text-accent-400">Page not found</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-white">Visit the store</h3>
+      <ul class="mt-4 space-y-3 text-sm text-sand-400">
+        <li class="flex gap-2.5"><i data-lucide="map-pin" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><span>42 Harbour Road, Marine Quarter, Portside 4021</span></li>
+        <li class="flex gap-2.5"><i data-lucide="phone" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><a href="tel:+15550142288" class="transition hover:text-accent-400">+1 (555) 014-2288</a></li>
+        <li class="flex gap-2.5"><i data-lucide="mail" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><a href="mailto:hello@travelpack.store" class="transition hover:text-accent-400">hello@travelpack.store</a></li>
+        <li class="flex gap-2.5"><i data-lucide="clock" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><span>Mon–Fri 10:00–20:00<br>Sat 10:00–21:00 · Sun closed</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-sand-500 sm:flex-row sm:px-6 lg:px-8">
+      <p>© <span data-year>2026</span> TravelPack. Pack Smart. Travel Far.</p>
+      <p>Demo storefront — enquiries are stored on this device only. No accounts or online payments.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" type="button" aria-label="Back to top" class="fixed bottom-4 start-4 z-40 grid h-11 w-11 place-items-center rounded-full bg-navy-900 text-white shadow-lg transition hover:bg-accent-500 dark:bg-accent-500 dark:hover:bg-accent-600">
+  <i data-lucide="arrow-up" class="h-5 w-5"></i>
+</button>
+
+</body>
+</html>
