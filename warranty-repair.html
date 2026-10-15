@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
 <title>Warranty &amp; Repair — TravelPack | Claims, Service and Repair Bench</title>
 <meta name="description" content="TravelPack warranty terms, what is covered, the three-step claim process and our in-house repair bench for wheels, handles, zips, locks and shells — plus a repair enquiry form.">
 <script>(function(){try{var t=localStorage.getItem('travelpack_theme');if(t!=='dark'&&t!=='light'){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}var d=localStorage.getItem('travelpack_direction');document.documentElement.setAttribute('dir',d==='rtl'?'rtl':'ltr');}catch(e){}})();</script>
@@ -49,7 +51,7 @@ tailwind.config = {
         </span>
       </a>
 
-      <nav class="hidden items-center gap-1 lg:flex" aria-label="Main">
+      <nav class="hidden items-center gap-1 xl:flex" aria-label="Main">
         <div class="relative" data-dropdown>
           <button type="button" data-dropdown-btn data-nav="home" aria-expanded="false" class="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">
             Home <i data-lucide="chevron-down" class="h-4 w-4"></i>
@@ -59,25 +61,25 @@ tailwind.config = {
             <a href="home2.html" class="block rounded-lg px-3 py-2 text-sm font-medium text-navy-900 hover:bg-sand-100 dark:text-sand-200 dark:hover:bg-white/5">Home 2</a>
           </div>
         </div>
+        <a href="about.html" data-nav="about" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">About</a>
         <a href="products.html" data-nav="products" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Products</a>
         <a href="warranty-repair.html" data-nav="warranty" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Warranty &amp; Repair</a>
-        <a href="about.html" data-nav="about" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">About</a>
         <a href="blog.html" data-nav="blog" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Blog</a>
         <a href="contact.html" data-nav="contact" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Contact</a>
       </nav>
 
       <div class="flex items-center gap-2">
-        <a href="warranty-repair.html#repair-form" class="hidden rounded-xl bg-navy-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-accent-500 sm:inline-flex dark:bg-accent-500 dark:hover:bg-accent-600">Request a repair</a>
-        <button type="button" id="dir-toggle" aria-label="Switch layout direction" class="flex h-10 items-center gap-1.5 rounded-xl border border-sand-200 bg-white px-3 text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
-        <button type="button" id="theme-toggle" aria-label="Toggle colour theme" class="grid h-10 w-10 place-items-center rounded-xl border border-sand-200 bg-white text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
-        <button type="button" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" class="grid h-10 w-10 place-items-center rounded-xl border border-sand-200 bg-white text-navy-900 transition hover:border-accent-500 lg:hidden dark:border-white/15 dark:bg-navy-900 dark:text-sand-200">
+        <button type="button" id="dir-toggle" data-dir-toggle aria-label="Switch layout direction" class="hidden h-10 items-center gap-1.5 rounded-xl border border-sand-200 bg-white px-3 text-navy-900 transition hover:border-accent-500 hover:text-accent-600 xl:flex dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
+        <button type="button" id="theme-toggle" data-theme-toggle aria-label="Toggle colour theme" class="hidden h-10 w-10 place-items-center rounded-xl border border-sand-200 bg-white text-navy-900 transition hover:border-accent-500 hover:text-accent-600 xl:grid dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
+        <a href="warranty-repair.html#repair-form" class="hidden rounded-xl bg-navy-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-accent-500 xl:inline-flex dark:bg-accent-500 dark:hover:bg-accent-600">Request a repair</a>
+        <button type="button" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" class="grid h-10 w-10 place-items-center rounded-xl border border-sand-200 bg-white text-navy-900 transition hover:border-accent-500 xl:hidden dark:border-white/15 dark:bg-navy-900 dark:text-sand-200">
           <i data-lucide="menu" class="h-5 w-5"></i>
         </button>
       </div>
     </div>
   </div>
 
-  <div id="mobile-menu" class="tp-mobile-panel hidden border-t border-sand-200 bg-white lg:hidden dark:border-white/10 dark:bg-navy-950">
+  <div id="mobile-menu" class="tp-mobile-panel hidden border-t border-sand-200 bg-white xl:hidden dark:border-white/10 dark:bg-navy-950">
     <div class="max-h-[75vh] space-y-1 overflow-y-auto px-4 py-4">
       <button type="button" data-mobile-sub-btn aria-expanded="false" data-nav="home" class="flex w-full items-center justify-between rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">
         Home
@@ -87,11 +89,15 @@ tailwind.config = {
         <a href="index.html" class="block rounded-lg px-3 py-2.5 text-sm text-charcoal-600 hover:bg-sand-100 dark:text-sand-300 dark:hover:bg-white/5">Home 1</a>
         <a href="home2.html" class="block rounded-lg px-3 py-2.5 text-sm text-charcoal-600 hover:bg-sand-100 dark:text-sand-300 dark:hover:bg-white/5">Home 2</a>
       </div>
+      <a href="about.html" data-nav="about" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">About</a>
       <a href="products.html" data-nav="products" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Products</a>
       <a href="warranty-repair.html" data-nav="warranty" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Warranty &amp; Repair</a>
-      <a href="about.html" data-nav="about" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">About</a>
       <a href="blog.html" data-nav="blog" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Blog</a>
       <a href="contact.html" data-nav="contact" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Contact</a>
+      <div class="mt-2 grid grid-cols-2 gap-2 border-t border-sand-200 pt-3 dark:border-white/10">
+        <button type="button" data-dir-toggle="icon" aria-label="Switch layout direction" class="flex h-11 items-center justify-center gap-2 rounded-xl border border-sand-200 bg-white px-3 text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
+        <button type="button" data-theme-toggle="icon" aria-label="Toggle colour theme" class="flex h-11 items-center justify-center gap-2 rounded-xl border border-sand-200 bg-white px-3 text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
+      </div>
       <a href="warranty-repair.html#repair-form" class="mt-2 block rounded-xl bg-accent-500 px-3 py-3 text-center text-sm font-semibold text-white hover:bg-accent-600">Request a repair</a>
     </div>
   </div>
@@ -99,29 +105,31 @@ tailwind.config = {
 
 <main>
   <!-- ============ PAGE HEAD ============ -->
-  <section class="border-b border-sand-200 bg-white py-10 sm:py-14 dark:border-white/10 dark:bg-navy-900/50">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <nav class="flex items-center gap-2 text-xs font-medium text-charcoal-400 dark:text-sand-500" aria-label="Breadcrumb">
-        <a href="index.html" class="transition hover:text-accent-600">Home</a>
+  <section class="relative overflow-hidden border-b border-white/10 py-10 sm:py-14">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://images.pexels.com/photos/5973974/pexels-photo-5973974.jpeg?auto=compress&cs=tinysrgb&w=1600')" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-950/95 via-navy-950/90 to-accent-500/15 rtl:bg-gradient-to-bl" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-xs font-medium text-sand-400" aria-label="Breadcrumb">
+        <a href="index.html" class="transition hover:text-accent-400">Home</a>
         <i data-lucide="chevron-right" class="h-3.5 w-3.5 rtl:rotate-180"></i>
-        <span class="text-navy-900 dark:text-sand-200">Warranty &amp; Repair</span>
+        <span class="text-sand-200">Warranty &amp; Repair</span>
       </nav>
       <div class="mt-4 grid gap-6 lg:grid-cols-[1.4fr_1fr] lg:items-center">
         <div>
-          <span class="inline-flex items-center gap-1.5 rounded-full bg-accent-500/10 px-3 py-1 text-xs font-semibold text-accent-600 dark:text-accent-400">
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-accent-500/15 px-3 py-1 text-xs font-semibold text-accent-400">
             <i data-lucide="badge-check" class="h-3.5 w-3.5"></i> In-house service bench
           </span>
-          <h1 class="mt-3 font-display text-3xl font-bold text-navy-900 sm:text-4xl dark:text-white">Warranty &amp; repair, handled by the people who sold it</h1>
-          <p class="mt-3 max-w-2xl text-sm leading-relaxed text-charcoal-500 dark:text-sand-400">We log every claim at the counter, diagnose it at our own bench and chase the manufacturer for you. Out-of-warranty work is always quoted in writing before a single screw comes out.</p>
+          <h1 class="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">Warranty &amp; repair, handled by the people who sold it</h1>
+          <p class="mt-3 max-w-2xl text-sm leading-relaxed text-sand-400">We log every claim at the counter, diagnose it at our own bench and chase the manufacturer for you. Out-of-warranty work is always quoted in writing before a single screw comes out.</p>
           <div class="mt-5 flex flex-wrap gap-3">
-            <a href="#repair-form" class="inline-flex items-center gap-2 rounded-xl bg-navy-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-500 dark:bg-accent-500 dark:hover:bg-accent-600">Submit a repair enquiry <i data-lucide="arrow-down" class="h-4 w-4 rtl:rotate-180"></i></a>
-            <a href="#covered" class="inline-flex items-center gap-2 rounded-xl border border-navy-900/15 px-5 py-3 text-sm font-semibold text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:text-sand-100 dark:hover:text-accent-400">See what is covered</a>
+            <a href="#repair-form" class="inline-flex items-center gap-2 rounded-xl bg-accent-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-600">Submit a repair enquiry <i data-lucide="arrow-down" class="h-4 w-4 rtl:rotate-180"></i></a>
+            <a href="#covered" class="inline-flex items-center gap-2 rounded-xl border border-white/25 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur transition hover:border-accent-400 hover:text-accent-400">See what is covered</a>
           </div>
-          <p id="repair-count" class="mt-4 text-xs font-medium text-charcoal-400 dark:text-sand-500"></p>
+          <p id="repair-count" class="mt-4 text-xs font-medium text-sand-400"></p>
         </div>
-        <div class="relative overflow-hidden rounded-2xl border border-sand-200 shadow-sm dark:border-white/10">
+        <div class="relative overflow-hidden rounded-2xl border border-white/15 shadow-lg">
           <img src="https://images.pexels.com/photos/30312048/pexels-photo-30312048.jpeg?auto=compress&cs=tinysrgb&w=1100" alt="Technician servicing a suitcase wheel at a repair bench" class="h-64 w-full object-cover sm:h-72" loading="eager" width="1100" height="733">
-          <div class="absolute bottom-3 start-3 flex items-center gap-2 rounded-lg bg-white/95 px-3 py-2 text-xs font-semibold text-navy-900 shadow dark:bg-navy-900/95 dark:text-sand-100">
+          <div class="absolute bottom-3 start-3 flex items-center gap-2 rounded-lg bg-navy-900/95 px-3 py-2 text-xs font-semibold text-sand-100 shadow">
             <i data-lucide="wrench" class="h-4 w-4 text-accent-500"></i> Average turnaround: 3–5 working days
           </div>
         </div>
@@ -275,6 +283,31 @@ tailwind.config = {
             <div class="flex gap-3"><i data-lucide="camera" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i><p class="text-sm text-charcoal-600 dark:text-sand-300">Photos of the fault can be sent to <a href="mailto:repairs@travelpack.store" class="font-semibold text-navy-900 underline decoration-accent-500 underline-offset-4 dark:text-white">repairs@travelpack.store</a> with your reference number.</p></div>
             <div class="flex gap-3"><i data-lucide="shield-check" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i><p class="text-sm text-charcoal-600 dark:text-sand-300">Submissions stay on this device — this demo storefront has no server or account system.</p></div>
           </div>
+
+          <div class="mt-6 rounded-2xl border border-sand-200 bg-white p-5 dark:border-white/10 dark:bg-navy-900">
+            <h3 class="font-display text-sm font-semibold text-navy-900 dark:text-white">What to have ready before you submit</h3>
+            <ul class="mt-4 grid gap-3 sm:grid-cols-2">
+              <li class="flex gap-2.5 text-sm text-charcoal-600 dark:text-sand-300"><i data-lucide="receipt" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i> Receipt or proof of purchase</li>
+              <li class="flex gap-2.5 text-sm text-charcoal-600 dark:text-sand-300"><i data-lucide="camera" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i> Close-up photos of the fault</li>
+              <li class="flex gap-2.5 text-sm text-charcoal-600 dark:text-sand-300"><i data-lucide="tag" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i> The model or range name</li>
+              <li class="flex gap-2.5 text-sm text-charcoal-600 dark:text-sand-300"><i data-lucide="calendar-clock" class="mt-0.5 h-4 w-4 shrink-0 text-accent-500"></i> Your travel date, if it is soon</li>
+            </ul>
+          </div>
+
+          <div class="mt-6 grid grid-cols-3 gap-3 text-center">
+            <div class="rounded-2xl border border-sand-200 bg-sand-50 p-4 dark:border-white/10 dark:bg-navy-950/60">
+              <p class="font-display text-xl font-bold text-navy-900 dark:text-white">24 hrs</p>
+              <p class="mt-1 text-[11px] font-medium uppercase tracking-wider text-charcoal-400 dark:text-sand-500">Call-back</p>
+            </div>
+            <div class="rounded-2xl border border-sand-200 bg-sand-50 p-4 dark:border-white/10 dark:bg-navy-950/60">
+              <p class="font-display text-xl font-bold text-navy-900 dark:text-white">3–5</p>
+              <p class="mt-1 text-[11px] font-medium uppercase tracking-wider text-charcoal-400 dark:text-sand-500">Working days</p>
+            </div>
+            <div class="rounded-2xl border border-sand-200 bg-sand-50 p-4 dark:border-white/10 dark:bg-navy-950/60">
+              <p class="font-display text-xl font-bold text-navy-900 dark:text-white">Free</p>
+              <p class="mt-1 text-[11px] font-medium uppercase tracking-wider text-charcoal-400 dark:text-sand-500">Assessment</p>
+            </div>
+          </div>
         </div>
 
         <form id="repair-form" class="scroll-mt-24 rounded-2xl border border-sand-200 bg-sand-50 p-5 sm:p-7 dark:border-white/10 dark:bg-navy-950/60" novalidate>
@@ -362,58 +395,58 @@ tailwind.config = {
 </main>
 
 <!-- ============ FOOTER ============ -->
-<footer class="bg-navy-950 text-sand-300">
+<footer class="bg-sand-100 text-charcoal-600 dark:bg-navy-950 dark:text-sand-300">
   <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4 lg:px-8">
     <div>
       <a href="index.html" class="flex items-center gap-2.5">
-        <span class="grid h-10 w-10 place-items-center rounded-xl bg-accent-500 text-white"><i data-lucide="luggage" class="h-5 w-5"></i></span>
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-navy-900 text-white dark:bg-accent-500"><i data-lucide="luggage" class="h-5 w-5"></i></span>
         <span class="leading-tight">
-          <span class="block font-display text-lg font-bold text-white">TravelPack</span>
-          <span class="block text-[11px] text-sand-400">Pack Smart. Travel Far.</span>
+          <span class="block font-display text-lg font-bold text-navy-900 dark:text-white">TravelPack</span>
+          <span class="block text-[11px] text-charcoal-400 dark:text-sand-400">Pack Smart. Travel Far.</span>
         </span>
       </a>
-      <p class="mt-4 text-sm leading-relaxed text-sand-400">A local luggage and travel bag store selling cabin cases, check-in luggage, sets, backpacks and accessories — with an in-house repair bench behind every purchase.</p>
+      <p class="mt-4 text-sm leading-relaxed text-charcoal-500 dark:text-sand-400">A local luggage and travel bag store selling cabin cases, check-in luggage, sets, backpacks and accessories — with an in-house repair bench behind every purchase.</p>
       <div class="mt-5 flex gap-3">
-        <a href="#" aria-label="TravelPack on Instagram" class="grid h-9 w-9 place-items-center rounded-lg border border-white/15 text-sand-300 transition hover:border-accent-500 hover:text-accent-400"><i data-lucide="instagram" class="h-4 w-4"></i></a>
-        <a href="#" aria-label="TravelPack on Facebook" class="grid h-9 w-9 place-items-center rounded-lg border border-white/15 text-sand-300 transition hover:border-accent-500 hover:text-accent-400"><i data-lucide="facebook" class="h-4 w-4"></i></a>
-        <a href="#" aria-label="TravelPack on YouTube" class="grid h-9 w-9 place-items-center rounded-lg border border-white/15 text-sand-300 transition hover:border-accent-500 hover:text-accent-400"><i data-lucide="youtube" class="h-4 w-4"></i></a>
+        <a href="#" aria-label="TravelPack on Instagram" class="grid h-9 w-9 place-items-center rounded-lg border border-navy-900/15 text-charcoal-600 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:text-sand-300 dark:hover:text-accent-400"><i data-lucide="instagram" class="h-4 w-4"></i></a>
+        <a href="#" aria-label="TravelPack on Facebook" class="grid h-9 w-9 place-items-center rounded-lg border border-navy-900/15 text-charcoal-600 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:text-sand-300 dark:hover:text-accent-400"><i data-lucide="facebook" class="h-4 w-4"></i></a>
+        <a href="#" aria-label="TravelPack on YouTube" class="grid h-9 w-9 place-items-center rounded-lg border border-navy-900/15 text-charcoal-600 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:text-sand-300 dark:hover:text-accent-400"><i data-lucide="youtube" class="h-4 w-4"></i></a>
       </div>
     </div>
     <div>
-      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-white">Shop</h3>
+      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-navy-900 dark:text-white">Shop</h3>
       <ul class="mt-4 space-y-2.5 text-sm">
-        <li><a href="products.html?type=Cabin%20Luggage" class="text-sand-400 transition hover:text-accent-400">Cabin luggage</a></li>
-        <li><a href="products.html?type=Check-in%20Luggage" class="text-sand-400 transition hover:text-accent-400">Check-in luggage</a></li>
-        <li><a href="products.html?type=Luggage%20Sets" class="text-sand-400 transition hover:text-accent-400">Luggage sets</a></li>
-        <li><a href="products.html?type=Travel%20Backpacks" class="text-sand-400 transition hover:text-accent-400">Travel backpacks</a></li>
-        <li><a href="products.html?type=Duffle%20Bags" class="text-sand-400 transition hover:text-accent-400">Duffle bags</a></li>
-        <li><a href="products.html" class="text-sand-400 transition hover:text-accent-400">All products</a></li>
+        <li><a href="products.html?type=Cabin%20Luggage" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Cabin luggage</a></li>
+        <li><a href="products.html?type=Check-in%20Luggage" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Check-in luggage</a></li>
+        <li><a href="products.html?type=Luggage%20Sets" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Luggage sets</a></li>
+        <li><a href="products.html?type=Travel%20Backpacks" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Travel backpacks</a></li>
+        <li><a href="products.html?type=Duffle%20Bags" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Duffle bags</a></li>
+        <li><a href="products.html" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">All products</a></li>
       </ul>
     </div>
     <div>
-      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-white">Customer care</h3>
+      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-navy-900 dark:text-white">Customer care</h3>
       <ul class="mt-4 space-y-2.5 text-sm">
-        <li><a href="about.html" class="text-sand-400 transition hover:text-accent-400">About us</a></li>
-        <li><a href="blog.html" class="text-sand-400 transition hover:text-accent-400">Blog</a></li>
-        <li><a href="warranty-repair.html" class="text-sand-400 transition hover:text-accent-400">Warranty &amp; repair</a></li>
-        <li><a href="warranty-repair.html#repair-form" class="text-sand-400 transition hover:text-accent-400">Submit a repair enquiry</a></li>
-        <li><a href="contact.html" class="text-sand-400 transition hover:text-accent-400">Contact &amp; store visit</a></li>
-        <li><a href="index.html#faq-anchor" class="text-sand-400 transition hover:text-accent-400">FAQ</a></li>
-        <li><a href="404.html" class="text-sand-400 transition hover:text-accent-400">Page not found</a></li>
+        <li><a href="about.html" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">About us</a></li>
+        <li><a href="blog.html" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Blog</a></li>
+        <li><a href="warranty-repair.html" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Warranty &amp; repair</a></li>
+        <li><a href="warranty-repair.html#repair-form" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Submit a repair enquiry</a></li>
+        <li><a href="contact.html" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Contact &amp; store visit</a></li>
+        <li><a href="index.html#faq-anchor" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">FAQ</a></li>
+        <li><a href="404.html" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Page not found</a></li>
       </ul>
     </div>
     <div>
-      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-white">Visit the store</h3>
-      <ul class="mt-4 space-y-3 text-sm text-sand-400">
-        <li class="flex gap-2.5"><i data-lucide="map-pin" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><span>42 Harbour Road, Marine Quarter, Portside 4021</span></li>
-        <li class="flex gap-2.5"><i data-lucide="phone" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><a href="tel:+15550142288" class="transition hover:text-accent-400">+1 (555) 014-2288</a></li>
-        <li class="flex gap-2.5"><i data-lucide="mail" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><a href="mailto:hello@travelpack.store" class="transition hover:text-accent-400">hello@travelpack.store</a></li>
-        <li class="flex gap-2.5"><i data-lucide="clock" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><span>Mon–Fri 10:00–20:00<br>Sat 10:00–21:00 · Sun closed</span></li>
+      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-navy-900 dark:text-white">Visit the store</h3>
+      <ul class="mt-4 space-y-3 text-sm text-charcoal-500 dark:text-sand-400">
+        <li class="flex gap-2.5"><i data-lucide="map-pin" class="mt-0.5 h-4 w-4 shrink-0 text-accent-600 dark:text-accent-400"></i><span>42 Harbour Road, Marine Quarter, Portside 4021</span></li>
+        <li class="flex gap-2.5"><i data-lucide="phone" class="mt-0.5 h-4 w-4 shrink-0 text-accent-600 dark:text-accent-400"></i><a href="tel:+15550142288" class="transition hover:text-accent-600 dark:hover:text-accent-400">+1 (555) 014-2288</a></li>
+        <li class="flex gap-2.5"><i data-lucide="mail" class="mt-0.5 h-4 w-4 shrink-0 text-accent-600 dark:text-accent-400"></i><a href="mailto:hello@travelpack.store" class="transition hover:text-accent-600 dark:hover:text-accent-400">hello@travelpack.store</a></li>
+        <li class="flex gap-2.5"><i data-lucide="clock" class="mt-0.5 h-4 w-4 shrink-0 text-accent-600 dark:text-accent-400"></i><span>Mon–Fri 10:00–20:00<br>Sat 10:00–21:00 · Sun closed</span></li>
       </ul>
     </div>
   </div>
-  <div class="border-t border-white/10">
-    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-sand-500 sm:flex-row sm:px-6 lg:px-8">
+  <div class="border-t border-navy-900/10 dark:border-white/10">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-charcoal-400 dark:text-sand-500 sm:flex-row sm:px-6 lg:px-8">
       <p>© <span data-year>2026</span> TravelPack. Pack Smart. Travel Far.</p>
       <p>Demo storefront — enquiries are stored on this device only. No accounts or online payments.</p>
     </div>

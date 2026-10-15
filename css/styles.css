@@ -105,7 +105,7 @@ body.tp-locked {
   width: 100%;
   border-radius: 0.75rem;
   border: 1px solid #eadfce;
-  background: #fff;
+  background-color: #fff;
   padding: 0.65rem 0.9rem;
   font-size: 0.9rem;
   color: #0f2440;
@@ -120,7 +120,7 @@ body.tp-locked {
 
 .dark .tp-input {
   border-color: rgba(255, 255, 255, 0.12);
-  background: rgba(10, 26, 48, 0.6);
+  background-color: rgba(10, 26, 48, 0.6);
   color: #f5efe6;
 }
 
@@ -147,7 +147,18 @@ select.tp-input {
 }
 
 .dark select.tp-input {
+  color-scheme: dark;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23ddc9a8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+}
+
+select.tp-input option {
+  color: #0f2440;
+  background-color: #fff;
+}
+
+.dark select.tp-input option {
+  color: #f5efe6;
+  background-color: #0a1a30;
 }
 
 .error-text {

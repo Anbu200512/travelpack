@@ -151,33 +151,12 @@
         "Compression straps matter more than brand on a soft bag.",
         "Bring a foldable tote for the return leg — it is always fuller."
       ]
-    },
-    {
-      id: "new-range",
-      title: "Behind the counter: how a new range lands in store",
-      category: "Store news",
-      date: "2026-06-12",
-      read: 5,
-      photo: 13111695,
-      alt: "Travellers carrying luggage through a spacious modern airport hallway",
-      excerpt: "Six weeks from first sample to shop floor, including the part where we reject most of what we are shown.",
-      body: [
-        "Samples arrive in spring. We roll each one down the test lane fully loaded, cycle the handle fifty times and put the wheels through a grit tray. Anything that develops play or noise is returned with notes.",
-        "The survivors are checked against spare-part availability — a model we cannot source wheels for in three years' time does not make the floor, however good it looks.",
-        "Only then does pricing happen. We compare the landed cost against comparable models already in store and set one price that holds all year, rather than a high anchor we can discount from."
-      ],
-      bullets: [
-        "Sample testing: two weeks.",
-        "Bench and part-availability review: one week.",
-        "Range selection and buy: two weeks.",
-        "Photography, sizing and catalogue entry: one week."
-      ]
     }
   ];
 
   TP.POSTS = POSTS;
 
-  var CATEGORIES = ["Guides", "Packing", "Care & repair", "Store news"];
+  var CATEGORIES = ["Guides", "Packing", "Care & repair"];
   var state = { cat: "", q: "" };
 
   function img(id, w) {

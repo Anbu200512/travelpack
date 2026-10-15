@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
 <title>About TravelPack — A Local Luggage Store With Its Own Repair Bench</title>
 <meta name="description" content="TravelPack has been fitting travellers with cabin cases, sets and backpacks since 2009 — honest advice on the shop floor, an in-house repair bench behind it, and no upselling you do not need.">
 <script>(function(){try{var t=localStorage.getItem('travelpack_theme');if(t!=='dark'&&t!=='light'){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}var d=localStorage.getItem('travelpack_direction');document.documentElement.setAttribute('dir',d==='rtl'?'rtl':'ltr');}catch(e){}})();</script>
@@ -48,7 +50,7 @@ tailwind.config = {
         </span>
       </a>
 
-      <nav class="hidden items-center gap-1 lg:flex" aria-label="Main">
+      <nav class="hidden items-center gap-1 xl:flex" aria-label="Main">
         <div class="relative" data-dropdown>
           <button type="button" data-dropdown-btn data-nav="home" aria-expanded="false" class="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">
             Home <i data-lucide="chevron-down" class="h-4 w-4"></i>
@@ -58,25 +60,25 @@ tailwind.config = {
             <a href="home2.html" class="block rounded-lg px-3 py-2 text-sm font-medium text-navy-900 hover:bg-sand-100 dark:text-sand-200 dark:hover:bg-white/5">Home 2</a>
           </div>
         </div>
+        <a href="about.html" data-nav="about" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">About</a>
         <a href="products.html" data-nav="products" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Products</a>
         <a href="warranty-repair.html" data-nav="warranty" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Warranty &amp; Repair</a>
-        <a href="about.html" data-nav="about" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">About</a>
         <a href="blog.html" data-nav="blog" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Blog</a>
         <a href="contact.html" data-nav="contact" class="rounded-lg px-3 py-2 text-sm font-medium text-charcoal-600 transition hover:text-accent-600 dark:text-sand-300 dark:hover:text-accent-400">Contact</a>
       </nav>
 
       <div class="flex items-center gap-2">
-        <a href="contact.html" class="hidden rounded-xl bg-navy-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-accent-500 sm:inline-flex dark:bg-accent-500 dark:hover:bg-accent-600">Visit the store</a>
-        <button type="button" id="dir-toggle" aria-label="Switch layout direction" class="flex h-10 items-center gap-1.5 rounded-xl border border-sand-200 bg-white px-3 text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
-        <button type="button" id="theme-toggle" aria-label="Toggle colour theme" class="grid h-10 w-10 place-items-center rounded-xl border border-sand-200 bg-white text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
-        <button type="button" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" class="grid h-10 w-10 place-items-center rounded-xl border border-sand-200 bg-white text-navy-900 transition hover:border-accent-500 lg:hidden dark:border-white/15 dark:bg-navy-900 dark:text-sand-200">
+        <button type="button" id="dir-toggle" data-dir-toggle aria-label="Switch layout direction" class="hidden h-10 items-center gap-1.5 rounded-xl border border-sand-200 bg-white px-3 text-navy-900 transition hover:border-accent-500 hover:text-accent-600 xl:flex dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
+        <button type="button" id="theme-toggle" data-theme-toggle aria-label="Toggle colour theme" class="hidden h-10 w-10 place-items-center rounded-xl border border-sand-200 bg-white text-navy-900 transition hover:border-accent-500 hover:text-accent-600 xl:grid dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
+        <a href="contact.html" class="hidden rounded-xl bg-navy-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-accent-500 xl:inline-flex dark:bg-accent-500 dark:hover:bg-accent-600">Visit the store</a>
+        <button type="button" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" class="grid h-10 w-10 place-items-center rounded-xl border border-sand-200 bg-white text-navy-900 transition hover:border-accent-500 xl:hidden dark:border-white/15 dark:bg-navy-900 dark:text-sand-200">
           <i data-lucide="menu" class="h-5 w-5"></i>
         </button>
       </div>
     </div>
   </div>
 
-  <div id="mobile-menu" class="tp-mobile-panel hidden border-t border-sand-200 bg-white lg:hidden dark:border-white/10 dark:bg-navy-950">
+  <div id="mobile-menu" class="tp-mobile-panel hidden border-t border-sand-200 bg-white xl:hidden dark:border-white/10 dark:bg-navy-950">
     <div class="max-h-[75vh] space-y-1 overflow-y-auto px-4 py-4">
       <button type="button" data-mobile-sub-btn aria-expanded="false" data-nav="home" class="flex w-full items-center justify-between rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">
         Home
@@ -86,11 +88,15 @@ tailwind.config = {
         <a href="index.html" class="block rounded-lg px-3 py-2.5 text-sm text-charcoal-600 hover:bg-sand-100 dark:text-sand-300 dark:hover:bg-white/5">Home 1</a>
         <a href="home2.html" class="block rounded-lg px-3 py-2.5 text-sm text-charcoal-600 hover:bg-sand-100 dark:text-sand-300 dark:hover:bg-white/5">Home 2</a>
       </div>
+      <a href="about.html" data-nav="about" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">About</a>
       <a href="products.html" data-nav="products" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Products</a>
       <a href="warranty-repair.html" data-nav="warranty" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Warranty &amp; Repair</a>
-      <a href="about.html" data-nav="about" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">About</a>
       <a href="blog.html" data-nav="blog" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Blog</a>
       <a href="contact.html" data-nav="contact" class="block rounded-xl px-3 py-3 text-sm font-semibold text-navy-900 hover:bg-sand-100 dark:text-sand-100 dark:hover:bg-white/5">Contact</a>
+      <div class="mt-2 grid grid-cols-2 gap-2 border-t border-sand-200 pt-3 dark:border-white/10">
+        <button type="button" data-dir-toggle="icon" aria-label="Switch layout direction" class="flex h-11 items-center justify-center gap-2 rounded-xl border border-sand-200 bg-white px-3 text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
+        <button type="button" data-theme-toggle="icon" aria-label="Toggle colour theme" class="flex h-11 items-center justify-center gap-2 rounded-xl border border-sand-200 bg-white px-3 text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:bg-navy-900 dark:text-sand-200 dark:hover:text-accent-400"></button>
+      </div>
       <a href="contact.html" class="mt-2 block rounded-xl bg-accent-500 px-3 py-3 text-center text-sm font-semibold text-white hover:bg-accent-600">Visit the store</a>
     </div>
   </div>
@@ -98,24 +104,26 @@ tailwind.config = {
 
 <main>
   <!-- ============ PAGE HEAD ============ -->
-  <section class="border-b border-sand-200 bg-white py-10 sm:py-14 dark:border-white/10 dark:bg-navy-900/50">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <nav class="flex items-center gap-2 text-xs font-medium text-charcoal-400 dark:text-sand-500" aria-label="Breadcrumb">
-        <a href="index.html" class="transition hover:text-accent-600">Home</a>
+  <section class="relative overflow-hidden border-b border-white/10 py-10 sm:py-14">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://images.pexels.com/photos/34629954/pexels-photo-34629954.jpeg?auto=compress&cs=tinysrgb&w=1600')" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-950/95 via-navy-950/90 to-accent-500/15 rtl:bg-gradient-to-bl" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-xs font-medium text-sand-400" aria-label="Breadcrumb">
+        <a href="index.html" class="transition hover:text-accent-400">Home</a>
         <i data-lucide="chevron-right" class="h-3.5 w-3.5 rtl:rotate-180"></i>
-        <span class="text-navy-900 dark:text-sand-200">About</span>
+        <span class="text-sand-200">About</span>
       </nav>
       <div class="mt-4 grid gap-6 lg:grid-cols-[1.3fr_1fr] lg:items-end">
         <div>
-          <span class="inline-flex items-center gap-1.5 rounded-full bg-azure-500/10 px-3 py-1 text-xs font-semibold text-azure-600 dark:text-azure-400">
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-azure-500/15 px-3 py-1 text-xs font-semibold text-azure-400">
             <i data-lucide="store" class="h-3.5 w-3.5"></i> Established 2009 · Marine Quarter
           </span>
-          <h1 class="mt-3 font-display text-3xl font-bold text-navy-900 sm:text-4xl dark:text-white">A luggage store built around the bags people actually carry</h1>
-          <p class="mt-3 max-w-2xl text-sm leading-relaxed text-charcoal-500 dark:text-sand-400">TravelPack started as a two-shelf corner shop on Harbour Road. Seventeen years later we stock thirty-four models, keep a repair bench out back, and still tell people when the cheaper case is the better buy.</p>
+          <h1 class="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">A luggage store built around the bags people actually carry</h1>
+          <p class="mt-3 max-w-2xl text-sm leading-relaxed text-sand-400">TravelPack started as a two-shelf corner shop on Harbour Road. Seventeen years later we stock thirty-four models, keep a repair bench out back, and still tell people when the cheaper case is the better buy.</p>
         </div>
         <div class="flex flex-wrap gap-3 lg:justify-end">
-          <a href="products.html" class="inline-flex items-center gap-2 rounded-xl bg-navy-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-500 dark:bg-accent-500 dark:hover:bg-accent-600">See the catalogue <i data-lucide="arrow-right" class="h-4 w-4 rtl:rotate-180"></i></a>
-          <a href="contact.html" class="inline-flex items-center gap-2 rounded-xl border border-navy-900/15 px-5 py-3 text-sm font-semibold text-navy-900 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:text-sand-100 dark:hover:text-accent-400">Visit us</a>
+          <a href="products.html" class="inline-flex items-center gap-2 rounded-xl bg-accent-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-600">See the catalogue <i data-lucide="arrow-right" class="h-4 w-4 rtl:rotate-180"></i></a>
+          <a href="contact.html" class="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white px-5 py-3 text-sm font-semibold text-navy-900 shadow-sm backdrop-blur transition hover:bg-sand-100">Visit us</a>
         </div>
       </div>
     </div>
@@ -294,8 +302,8 @@ tailwind.config = {
   <!-- ============ VISIT ============ -->
   <section class="py-12 sm:py-16">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="grid overflow-hidden rounded-2xl border border-sand-200 bg-white lg:grid-cols-2 dark:border-white/10 dark:bg-navy-900">
-        <img src="https://images.pexels.com/photos/13111695/pexels-photo-13111695.jpeg?auto=compress&cs=tinysrgb&w=1100" alt="Travellers carrying luggage through the terminal" class="h-60 w-full object-cover sm:h-80 lg:h-full" loading="lazy" width="1100" height="733">
+      <div class="grid overflow-hidden rounded-2xl border border-sand-200 bg-white lg:grid-cols-2 lg:items-center dark:border-white/10 dark:bg-navy-900">
+        <img src="https://images.pexels.com/photos/13111695/pexels-photo-13111695.jpeg?auto=compress&cs=tinysrgb&w=1100" alt="Travellers carrying luggage through the terminal" class="h-36 w-full object-cover sm:h-44 lg:h-64" loading="lazy" width="1100" height="733">
         <div class="p-6 sm:p-10">
           <p class="text-xs font-bold uppercase tracking-widest text-accent-600 dark:text-accent-400">Come in</p>
           <h2 class="mt-2 font-display text-2xl font-bold text-navy-900 dark:text-white">Bring your shortlist — or your broken bag</h2>
@@ -330,58 +338,58 @@ tailwind.config = {
 </main>
 
 <!-- ============ FOOTER ============ -->
-<footer class="bg-navy-950 text-sand-300">
+<footer class="bg-sand-100 text-charcoal-600 dark:bg-navy-950 dark:text-sand-300">
   <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4 lg:px-8">
     <div>
       <a href="index.html" class="flex items-center gap-2.5">
-        <span class="grid h-10 w-10 place-items-center rounded-xl bg-accent-500 text-white"><i data-lucide="luggage" class="h-5 w-5"></i></span>
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-navy-900 text-white dark:bg-accent-500"><i data-lucide="luggage" class="h-5 w-5"></i></span>
         <span class="leading-tight">
-          <span class="block font-display text-lg font-bold text-white">TravelPack</span>
-          <span class="block text-[11px] text-sand-400">Pack Smart. Travel Far.</span>
+          <span class="block font-display text-lg font-bold text-navy-900 dark:text-white">TravelPack</span>
+          <span class="block text-[11px] text-charcoal-400 dark:text-sand-400">Pack Smart. Travel Far.</span>
         </span>
       </a>
-      <p class="mt-4 text-sm leading-relaxed text-sand-400">A local luggage and travel bag store selling cabin cases, check-in luggage, sets, backpacks and accessories — with an in-house repair bench behind every purchase.</p>
+      <p class="mt-4 text-sm leading-relaxed text-charcoal-500 dark:text-sand-400">A local luggage and travel bag store selling cabin cases, check-in luggage, sets, backpacks and accessories — with an in-house repair bench behind every purchase.</p>
       <div class="mt-5 flex gap-3">
-        <a href="#" aria-label="TravelPack on Instagram" class="grid h-9 w-9 place-items-center rounded-lg border border-white/15 text-sand-300 transition hover:border-accent-500 hover:text-accent-400"><i data-lucide="instagram" class="h-4 w-4"></i></a>
-        <a href="#" aria-label="TravelPack on Facebook" class="grid h-9 w-9 place-items-center rounded-lg border border-white/15 text-sand-300 transition hover:border-accent-500 hover:text-accent-400"><i data-lucide="facebook" class="h-4 w-4"></i></a>
-        <a href="#" aria-label="TravelPack on YouTube" class="grid h-9 w-9 place-items-center rounded-lg border border-white/15 text-sand-300 transition hover:border-accent-500 hover:text-accent-400"><i data-lucide="youtube" class="h-4 w-4"></i></a>
+        <a href="#" aria-label="TravelPack on Instagram" class="grid h-9 w-9 place-items-center rounded-lg border border-navy-900/15 text-charcoal-600 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:text-sand-300 dark:hover:text-accent-400"><i data-lucide="instagram" class="h-4 w-4"></i></a>
+        <a href="#" aria-label="TravelPack on Facebook" class="grid h-9 w-9 place-items-center rounded-lg border border-navy-900/15 text-charcoal-600 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:text-sand-300 dark:hover:text-accent-400"><i data-lucide="facebook" class="h-4 w-4"></i></a>
+        <a href="#" aria-label="TravelPack on YouTube" class="grid h-9 w-9 place-items-center rounded-lg border border-navy-900/15 text-charcoal-600 transition hover:border-accent-500 hover:text-accent-600 dark:border-white/15 dark:text-sand-300 dark:hover:text-accent-400"><i data-lucide="youtube" class="h-4 w-4"></i></a>
       </div>
     </div>
     <div>
-      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-white">Shop</h3>
+      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-navy-900 dark:text-white">Shop</h3>
       <ul class="mt-4 space-y-2.5 text-sm">
-        <li><a href="products.html?type=Cabin%20Luggage" class="text-sand-400 transition hover:text-accent-400">Cabin luggage</a></li>
-        <li><a href="products.html?type=Check-in%20Luggage" class="text-sand-400 transition hover:text-accent-400">Check-in luggage</a></li>
-        <li><a href="products.html?type=Luggage%20Sets" class="text-sand-400 transition hover:text-accent-400">Luggage sets</a></li>
-        <li><a href="products.html?type=Travel%20Backpacks" class="text-sand-400 transition hover:text-accent-400">Travel backpacks</a></li>
-        <li><a href="products.html?type=Duffle%20Bags" class="text-sand-400 transition hover:text-accent-400">Duffle bags</a></li>
-        <li><a href="products.html" class="text-sand-400 transition hover:text-accent-400">All products</a></li>
+        <li><a href="products.html?type=Cabin%20Luggage" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Cabin luggage</a></li>
+        <li><a href="products.html?type=Check-in%20Luggage" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Check-in luggage</a></li>
+        <li><a href="products.html?type=Luggage%20Sets" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Luggage sets</a></li>
+        <li><a href="products.html?type=Travel%20Backpacks" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Travel backpacks</a></li>
+        <li><a href="products.html?type=Duffle%20Bags" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Duffle bags</a></li>
+        <li><a href="products.html" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">All products</a></li>
       </ul>
     </div>
     <div>
-      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-white">Customer care</h3>
+      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-navy-900 dark:text-white">Customer care</h3>
       <ul class="mt-4 space-y-2.5 text-sm">
-        <li><a href="about.html" class="text-sand-400 transition hover:text-accent-400">About us</a></li>
-        <li><a href="blog.html" class="text-sand-400 transition hover:text-accent-400">Blog</a></li>
-        <li><a href="warranty-repair.html" class="text-sand-400 transition hover:text-accent-400">Warranty &amp; repair</a></li>
-        <li><a href="warranty-repair.html#repair-form" class="text-sand-400 transition hover:text-accent-400">Submit a repair enquiry</a></li>
-        <li><a href="contact.html" class="text-sand-400 transition hover:text-accent-400">Contact &amp; store visit</a></li>
-        <li><a href="index.html#faq-anchor" class="text-sand-400 transition hover:text-accent-400">FAQ</a></li>
-        <li><a href="404.html" class="text-sand-400 transition hover:text-accent-400">Page not found</a></li>
+        <li><a href="about.html" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">About us</a></li>
+        <li><a href="blog.html" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Blog</a></li>
+        <li><a href="warranty-repair.html" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Warranty &amp; repair</a></li>
+        <li><a href="warranty-repair.html#repair-form" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Submit a repair enquiry</a></li>
+        <li><a href="contact.html" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Contact &amp; store visit</a></li>
+        <li><a href="index.html#faq-anchor" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">FAQ</a></li>
+        <li><a href="404.html" class="text-charcoal-500 transition hover:text-accent-600 dark:text-sand-400 dark:hover:text-accent-400">Page not found</a></li>
       </ul>
     </div>
     <div>
-      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-white">Visit the store</h3>
-      <ul class="mt-4 space-y-3 text-sm text-sand-400">
-        <li class="flex gap-2.5"><i data-lucide="map-pin" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><span>42 Harbour Road, Marine Quarter, Portside 4021</span></li>
-        <li class="flex gap-2.5"><i data-lucide="phone" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><a href="tel:+15550142288" class="transition hover:text-accent-400">+1 (555) 014-2288</a></li>
-        <li class="flex gap-2.5"><i data-lucide="mail" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><a href="mailto:hello@travelpack.store" class="transition hover:text-accent-400">hello@travelpack.store</a></li>
-        <li class="flex gap-2.5"><i data-lucide="clock" class="mt-0.5 h-4 w-4 shrink-0 text-accent-400"></i><span>Mon–Fri 10:00–20:00<br>Sat 10:00–21:00 · Sun closed</span></li>
+      <h3 class="font-display text-sm font-bold uppercase tracking-wider text-navy-900 dark:text-white">Visit the store</h3>
+      <ul class="mt-4 space-y-3 text-sm text-charcoal-500 dark:text-sand-400">
+        <li class="flex gap-2.5"><i data-lucide="map-pin" class="mt-0.5 h-4 w-4 shrink-0 text-accent-600 dark:text-accent-400"></i><span>42 Harbour Road, Marine Quarter, Portside 4021</span></li>
+        <li class="flex gap-2.5"><i data-lucide="phone" class="mt-0.5 h-4 w-4 shrink-0 text-accent-600 dark:text-accent-400"></i><a href="tel:+15550142288" class="transition hover:text-accent-600 dark:hover:text-accent-400">+1 (555) 014-2288</a></li>
+        <li class="flex gap-2.5"><i data-lucide="mail" class="mt-0.5 h-4 w-4 shrink-0 text-accent-600 dark:text-accent-400"></i><a href="mailto:hello@travelpack.store" class="transition hover:text-accent-600 dark:hover:text-accent-400">hello@travelpack.store</a></li>
+        <li class="flex gap-2.5"><i data-lucide="clock" class="mt-0.5 h-4 w-4 shrink-0 text-accent-600 dark:text-accent-400"></i><span>Mon–Fri 10:00–20:00<br>Sat 10:00–21:00 · Sun closed</span></li>
       </ul>
     </div>
   </div>
-  <div class="border-t border-white/10">
-    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-sand-500 sm:flex-row sm:px-6 lg:px-8">
+  <div class="border-t border-navy-900/10 dark:border-white/10">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-charcoal-400 dark:text-sand-500 sm:flex-row sm:px-6 lg:px-8">
       <p>© <span data-year>2026</span> TravelPack. Pack Smart. Travel Far.</p>
       <p>Demo storefront — enquiries are stored on this device only. No accounts or online payments.</p>
     </div>

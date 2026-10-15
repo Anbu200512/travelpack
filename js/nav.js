@@ -17,16 +17,16 @@
     if (persist) TP.store.setText(TP.keys.theme, theme);
     TP.savePreference({ theme: theme });
 
-    var btn = document.getElementById("theme-toggle");
-    if (btn) {
+    var btns = document.querySelectorAll("[data-theme-toggle]");
+    Array.prototype.forEach.call(btns, function (btn) {
       btn.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
       btn.setAttribute("title", theme === "dark" ? "Light mode" : "Dark mode");
       btn.innerHTML =
         '<i data-lucide="' +
         (theme === "dark" ? "sun" : "moon") +
         '" class="h-[18px] w-[18px]"></i>';
-      TP.icons();
-    }
+    });
+    TP.icons();
   }
 
   /* ---------------- direction ---------------- */
@@ -35,17 +35,14 @@
     if (persist) TP.store.setText(TP.keys.direction, dir);
     TP.savePreference({ direction: dir });
 
-    var btn = document.getElementById("dir-toggle");
-    if (btn) {
+    var btns = document.querySelectorAll("[data-dir-toggle]");
+    Array.prototype.forEach.call(btns, function (btn) {
       btn.setAttribute("aria-label", dir === "rtl" ? "Switch to left-to-right layout" : "Switch to right-to-left layout");
       btn.setAttribute("title", dir === "rtl" ? "LTR layout" : "RTL layout");
       btn.innerHTML =
-        '<i data-lucide="arrow-right-left" class="h-[18px] w-[18px]"></i>' +
-        '<span class="hidden text-[11px] font-bold tracking-wider sm:inline">' +
-        (dir === "rtl" ? "RTL" : "LTR") +
-        "</span>";
-      TP.icons();
-    }
+        '<i data-lucide="arrow-right-left" class="h-[18px] w-[18px]"></i>';
+    });
+    TP.icons();
   }
 
   TP.setTheme = function (theme) {
@@ -91,7 +88,7 @@
     });
 
     window.addEventListener("resize", function () {
-      if (window.innerWidth >= 1024) return;
+      if (window.innerWidth >= 1280) return;
       close();
     });
   }
@@ -124,7 +121,7 @@
     });
 
     window.addEventListener("resize", function () {
-      if (window.innerWidth >= 1024) setOpen(false);
+      if (window.innerWidth >= 1280) setOpen(false);
     });
 
     /* mobile Home disclosure (dropdown inside mobile menu) */
@@ -180,23 +177,21 @@
     var dir = storedDir === "rtl" || storedDir === "ltr" ? storedDir : "ltr";
     applyDirection(dir, false);
 
-    var themeBtn = document.getElementById("theme-toggle");
-    if (themeBtn) {
+    var themeBtns = document.querySelectorAll("[data-theme-toggle]");
+    Array.prototype.forEach.call(themeBtns, function (themeBtn) {
       themeBtn.addEventListener("click", function () {
         var isDark = document.documentElement.classList.contains("dark");
         applyTheme(isDark ? "light" : "dark", true);
-        TP.toast(isDark ? "Light mode enabled" : "Dark mode enabled", "info");
       });
-    }
+    });
 
-    var dirBtn = document.getElementById("dir-toggle");
-    if (dirBtn) {
+    var dirBtns = document.querySelectorAll("[data-dir-toggle]");
+    Array.prototype.forEach.call(dirBtns, function (dirBtn) {
       dirBtn.addEventListener("click", function () {
         var next = document.documentElement.getAttribute("dir") === "rtl" ? "ltr" : "rtl";
         applyDirection(next, true);
-        TP.toast(next === "rtl" ? "Right-to-left layout enabled" : "Left-to-right layout enabled", "info");
       });
-    }
+    });
 
     initDropdown();
     initMobileMenu();

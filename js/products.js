@@ -464,32 +464,6 @@
       blurb: "Six cubes that turn a messy case into a tidy drawer."
     },
     {
-      id: "tp-acc-locks",
-      name: "TSA Combination Luggage Locks (Set of 3)",
-      type: TYPE_ACCESSORY,
-      size: "3 pieces · 45 mm shackle",
-      sizeKey: "accessory",
-      material: "Zinc alloy body with steel shackle",
-      features: ["TSA master-key compliant", "3-digit resettable dial", "Open alerts on tamper", "Bright colour coding"],
-      price: 24,
-      stock: "In stock",
-      photo: 943922,
-      blurb: "Three locks so every bag in the set stays sealed."
-    },
-    {
-      id: "tp-acc-tags",
-      name: "Luggage Tag & Handle Wrap Set",
-      type: TYPE_ACCESSORY,
-      size: "4 pieces · 2 tags + 2 wraps",
-      sizeKey: "accessory",
-      material: "Silicone-coated steel cable tags",
-      features: ["Privacy-shield name card", "Scratch-free handle wrap", "Waterproof printing", "Quick-clip buckles"],
-      price: 19,
-      stock: "In stock",
-      photo: 15444391,
-      blurb: "Make your bag easy to spot and comfortable to pull."
-    },
-    {
       id: "tp-acc-kit",
       name: "Travel Essentials Accessory Kit",
       type: TYPE_ACCESSORY,
@@ -530,7 +504,6 @@
 
   /* ---------------- card templates ---------------- */
   function productCard(p) {
-    var featureLine = p.features.slice(0, 2).join(" · ");
     return (
       '<article class="product-card reveal flex h-full flex-col overflow-hidden rounded-2xl border border-sand-200 dark:border-white/10 bg-white dark:bg-navy-800 shadow-sm transition hover:shadow-xl">' +
       '<div class="relative aspect-[4/3] overflow-hidden bg-sand-100 dark:bg-navy-900">' +
@@ -557,17 +530,6 @@
       p.type +
       "</p>" +
       "</div>" +
-      '<dl class="space-y-1.5 text-sm text-charcoal-600 dark:text-sand-300">' +
-      '<div class="flex gap-2"><dt class="w-16 shrink-0 text-charcoal-400 dark:text-sand-500">Size</dt><dd>' +
-      p.size +
-      "</dd></div>" +
-      '<div class="flex gap-2"><dt class="w-16 shrink-0 text-charcoal-400 dark:text-sand-500">Material</dt><dd class="line-clamp-1">' +
-      p.material +
-      "</dd></div>" +
-      '<div class="flex gap-2"><dt class="w-16 shrink-0 text-charcoal-400 dark:text-sand-500">Features</dt><dd class="line-clamp-2">' +
-      featureLine +
-      "</dd></div>" +
-      "</dl>" +
       '<div class="mt-auto flex items-center gap-2 text-xs font-medium text-charcoal-500 dark:text-sand-400"><span class="h-2 w-2 rounded-full ' +
       stockDot(p.stock) +
       '"></span>' +
@@ -579,14 +541,15 @@
       '" class="flex-1 rounded-xl border border-navy-900/15 dark:border-white/15 px-3 py-2.5 text-xs font-semibold text-navy-900 dark:text-sand-100 transition hover:border-accent-500 hover:text-accent-600 dark:hover:text-accent-400">View Details</button>' +
       '<button type="button" data-enquire="' +
       p.name +
-      '" class="flex-1 rounded-xl bg-navy-900 dark:bg-accent-500 px-3 py-2.5 text-xs font-semibold text-white transition hover:bg-accent-600 dark:hover:bg-accent-600">Enquire / Buy</button>' +
+      '" class="flex-1 rounded-xl bg-navy-900 dark:bg-accent-500 px-3 py-2.5 text-xs font-semibold text-white transition hover:bg-accent-600 dark:hover:bg-accent-600">Buy</button>' +
       "</div>" +
       "</div></article>"
     );
   }
 
-  function setCard(p, compact) {
+  function setCard(p, compact, showSpec) {
     var s = p.set;
+    if (showSpec === undefined) showSpec = true;
     var specRow = function (label, value) {
       return (
         '<div class="flex items-start gap-3 border-b border-sand-100 dark:border-white/5 py-2 text-sm">' +
@@ -597,6 +560,16 @@
         "</span></div>"
       );
     };
+    var specBlock = showSpec
+      ? '<div class="rounded-xl bg-sand-50 dark:bg-navy-900/60 px-3">' +
+        specRow("Pieces", s.pieces) +
+        specRow("Sizes", s.sizes) +
+        specRow("Material", p.material) +
+        specRow("Wheels", s.wheels) +
+        specRow("Lock", s.lock) +
+        (compact ? "" : specRow("Warranty", s.warranty)) +
+        "</div>"
+      : "";
     return (
       '<article class="reveal flex h-full flex-col overflow-hidden rounded-2xl border border-sand-200 dark:border-white/10 bg-white dark:bg-navy-800 shadow-sm transition hover:shadow-xl">' +
       '<div class="relative aspect-[4/3] overflow-hidden bg-sand-100 dark:bg-navy-900">' +
@@ -619,21 +592,14 @@
       '<p class="mt-1 text-sm text-charcoal-500 dark:text-sand-400">' +
       p.blurb +
       "</p></div>" +
-      '<div class="rounded-xl bg-sand-50 dark:bg-navy-900/60 px-3">' +
-      specRow("Pieces", s.pieces) +
-      specRow("Sizes", s.sizes) +
-      specRow("Material", p.material) +
-      specRow("Wheels", s.wheels) +
-      specRow("Lock", s.lock) +
-      (compact ? "" : specRow("Warranty", s.warranty)) +
-      "</div>" +
+      specBlock +
       '<div class="mt-auto flex gap-2 pt-1">' +
       '<button type="button" data-view="' +
       p.id +
       '" class="flex-1 rounded-xl border border-navy-900/15 dark:border-white/15 px-3 py-2.5 text-xs font-semibold text-navy-900 dark:text-sand-100 transition hover:border-accent-500 hover:text-accent-600 dark:hover:text-accent-400">View Details</button>' +
       '<button type="button" data-enquire="' +
       p.name +
-      '" class="flex-1 rounded-xl bg-accent-500 px-3 py-2.5 text-xs font-semibold text-white transition hover:bg-accent-600">Enquire / Buy</button>' +
+      '" class="flex-1 rounded-xl bg-accent-500 px-3 py-2.5 text-xs font-semibold text-white transition hover:bg-accent-600">Buy</button>' +
       "</div></div></article>"
     );
   }
@@ -658,21 +624,19 @@
     return list.map(productCard).join("");
   }
 
-  function renderSets(compact) {
+  function renderSets(compact, showSpec) {
     return pick(function (p) {
       return p.type === TYPE_SETS;
     }, 4)
       .map(function (p) {
-        return setCard(p, compact);
+        return setCard(p, compact, showSpec);
       })
       .join("");
   }
 
   /* ---------------- home sections ---------------- */
   function renderHome() {
-    fill("home-sets", renderSets(false));
-    fill("home-featured", renderCards(pick(function (p) { return p.featured && p.type !== TYPE_SETS; }, 4)));
-    fill("home-cabin", renderCards(pick(function (p) { return p.type === TYPE_CABIN; }, 3)));
+    fill("home-sets", renderSets(false, false));
     fill("home-backpacks", renderCards(pick(function (p) { return p.type === TYPE_BACKPACK; }, 4)));
     fill(
       "home-premium",
@@ -683,8 +647,7 @@
       )
     );
 
-    fill("home2-sets", renderSets(true));
-    fill("home2-arrivals", renderCards(PRODUCTS.slice(0, 8)));
+    fill("home2-sets", renderSets(true, false));
     fill(
       "home2-accessories",
       renderCards(
