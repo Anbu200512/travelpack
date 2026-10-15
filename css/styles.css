@@ -233,6 +233,29 @@ select.tp-input option {
   background-image: linear-gradient(270deg, rgba(10,26,48,.92) 0%, rgba(10,26,48,.72) 55%, rgba(10,26,48,.55) 100%);
 }
 
+/* ---------- Active nav indicator (filled pill) ---------- */
+#site-header nav [data-nav] {
+  position: relative;
+}
+
+#site-header nav [data-nav].tp-nav-active {
+  background-color: #f1f6fb;
+  color: #122745;
+}
+
+#site-header nav [data-nav].tp-nav-active:hover {
+  color: #122745;
+}
+
+.dark #site-header nav [data-nav].tp-nav-active {
+  background-color: rgba(249, 115, 22, 0.15);
+  color: #fb923c;
+}
+
+.dark #site-header nav [data-nav].tp-nav-active:hover {
+  color: #fb923c;
+}
+
 /* ---------- Ultra-narrow header (fits 320px) ---------- */
 @media (max-width: 359.98px) {
   #site-header .tp-tagline {

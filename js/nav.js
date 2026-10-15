@@ -145,7 +145,7 @@
     var links = document.querySelectorAll("[data-nav]");
     Array.prototype.forEach.call(links, function (link) {
       if (link.getAttribute("data-nav") === page) {
-        link.classList.add("text-accent-600", "dark:text-accent-400", "font-semibold");
+        link.classList.add("tp-nav-active", "font-semibold");
         link.setAttribute("aria-current", "page");
       }
     });
